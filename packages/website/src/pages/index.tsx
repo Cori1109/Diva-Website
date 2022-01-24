@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { DivaDig, DivaLogo } from "../components/DivaLogo";
-import { getAllPosts, getAllSlugs } from './lib/getPosts'
+import { getAllPosts, getAllSlugs } from './api/getPosts'
 
 export const getStaticProps = async () => {
   // const posts = getAllPosts()
@@ -30,7 +30,7 @@ const Home: NextPage<{ posts: string[] }> = ({ posts }) => {
         </figure>
         <div className="flex text-1xl justify-center ">
           <h1 className="text-center mr-3">
-            The future of derivatives is almost here.
+            The future of derivatives is coming in 2022
           </h1>
           <ul className="flex">
             <li>
