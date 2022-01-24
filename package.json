@@ -1,0 +1,11 @@
+{
+  "name": "diva-mono",
+  "version": "0.0.0",
+  "author": "The Diva Team",
+  "license": "MIT",
+  "dependencies": {},
+  "private": true,
+  "workspaces": [
+    "packages/**/*"
+  ]
+}
