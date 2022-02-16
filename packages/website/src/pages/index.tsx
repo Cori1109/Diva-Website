@@ -1,29 +1,34 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { DivaDig, DivaLogo } from "../components/DivaLogo";
+import { useEffect } from 'react';
+import { DivaLogo, DivaType } from "../components/DivaLogo";
+import { ReadingIcon } from '../components/ReadingIcon';
 import { getAllPosts, getAllSlugs } from './api/getPosts'
 
 export type Post = {
-  content: string,
-  title: string,
-  slug: string,
-  date: string,
-  excerpt: string,
-}
+  content: string;
+  title: string;
+  slug: string;
+  date: string;
+  coverImage: string;
+  coverImageDescription: string;
+  coverImageWidth: number;
+  coverImageHeight: number;
+  excerpt: string;
+};
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
 
   return {
     props: {
       posts,
     },
   };
-}
+};
 
 const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
-  console.log(posts);
   return (
     <>
       <Head>
@@ -32,42 +37,43 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
         <link rel="icon" href="/logo.svg" />
       </Head>
 
-      <main className="moving-gradient">
-        <figure className="h-4/5 flex flex-col justify-center items-center">
-          <DivaDig className="mb-16 w-1/3" aria-label="Diva Protocol Logo" />
-        </figure>
-        <div className="flex text-1xl justify-center ">
-          <h1 className="text-center mr-3">
-            The future of derivatives is coming in 2022
-          </h1>
-          <ul className="flex">
-            <li>
-              <a
-                className="text-blue mr-3 border-b pb-1"
-                href="https://twitter.com/divaprotocol_io"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-blue mr-3 border-b pb-1"
-                href="https://discord.gg/6xw3kEzc"
-              >
-                Discord
-              </a>
-            </li>
+      <main className="moving-gradient text-white overflow-auto">
+        <div className="flex h-full flex-col">
+          <figure className="h-full flex flex-col justify-center items-center">
+            <DivaLogo
+              className="stroke-text mb-16 w-40 max-w-xs"
+              aria-label="Diva Protocol Logo"
+            />
+            <DivaType className="stroke-text w-80 fill-text" />
+          </figure>
+          <div className="text-center mr-3 flex align-center justify-center text-xl text-text pt-3 pb-11 space-x-9">
+            <p>The future of derivatives is almost here</p>
+            <a
+              className="mr-3 border-b pb-2"
+              href="https://twitter.com/divaprotocol_io"
+            >
+              Twitter
+            </a>
+
+            <a
+              className="mr-3 border-b pb-2"
+              href="https://discord.gg/6xw3kEzc"
+            >
+              Discord
+            </a>
+          </div>
+        </div>
+        <div className="justify-center flex flex-col align-center space-y-20 pt-20 pb-44">
+          <ReadingIcon className="w-8 self-center" />
+          <ul className="self-center">
+            {posts.map((v) => (
+              <li key={v.title} className="flex flex-col">
+                <a className="text-xl text-text" href={`/posts/${v.slug}`}>{v.title}</a>
+                <time className="self-center pt-3">{v.date}</time>
+              </li>
+            ))}
           </ul>
         </div>
-
-        <ul>
-          {posts.map((v) => (
-            <li key={v.title}>
-              <a href={`/posts/${v.slug}`}>{v.title}</a>
-            </li>
-          ))}
-          <li>One blog post</li>
-        </ul>
       </main>
     </>
   );

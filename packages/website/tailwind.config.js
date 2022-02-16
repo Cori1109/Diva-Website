@@ -1,16 +1,27 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.text"),
+            "*": {
+              color: theme("colors.text"),
+            },
+          },
+        },
+      }),
+    },
     colors: {
-      black: "#01000B",
-      bg2: "#060321",
-      blue: '#00BBE1',
+      current: "currentColor",
+      text: '#fff',
+      blue: '#00496B',
     },
     fontFamily: {
-      sans: ["Source Sans Pro", "sans-serif"],
+      sans: ["Roboto", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

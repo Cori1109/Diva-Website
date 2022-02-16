@@ -38,7 +38,7 @@ html, body, #__next, main {
 .moving-gradient {
 	background: linear-gradient(-45deg, rgb(0, 25, 41), #01000B, #00281e, rgb(48, 0, 0), rgb(0, 25, 41));
 	background-size: 400% 400%;
-	animation: gradient 30s ease infinite;
+	animation: gradient 50s ease infinite;
 	height: 100vh;
 }
 
