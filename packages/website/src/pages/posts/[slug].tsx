@@ -80,7 +80,7 @@ const PostPage = ({ source, post }: PostPageProps) => {
           height={post.coverImageHeight}
           layout="responsive"
         />
-        <div className="pt-10 prose m-auto prose-slate">
+        <div className="pt-12 prose max-w-2xl m-auto prose-slate px-10">
           <h1>{post.title}</h1>
           <p className="text-slate">
             By <strong>{post.author}</strong> at{" "}

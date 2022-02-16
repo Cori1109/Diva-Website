@@ -52,17 +52,17 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
             />
             <DivaType className="stroke-text w-80 fill-text" />
           </figure>
-          <div className="text-center mr-3 flex align-center justify-center text-2xl text-text pt-3 pb-11 space-x-12">
+          <div className="px-10 text-center mr-3 md:flex flex-col md:flex-row align-center justify-center text-2xl text-text pt-3 pb-11 md:space-x-12">
             <p>The future of derivatives is here</p>
             <a
-              className="mr-3 border-b pb-2"
+              className="mr-3 border-b pb-2 inline-block"
               href="https://twitter.com/divaprotocol_io"
             >
               Twitter
             </a>
 
             <a
-              className="mr-3 border-b pb-2"
+              className="mr-3 border-b pb-2 inline-block"
               href="https://discord.gg/6xw3kEzc"
             >
               Discord
@@ -71,7 +71,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
         </div>
         <div className="justify-center flex flex-col align-center space-y-20 pt-20 pb-44">
           <ReadingIcon className="w-8 self-center" />
-          <ul className="self-center">
+          <ul className="self-center px-10">
             {posts.map((v) => (
               <li key={v.title}>
                 <Link href={`/posts/${v.slug}`} passHref>
