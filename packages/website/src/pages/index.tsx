@@ -6,6 +6,7 @@ import { DivaLogo, DivaType } from "../components/DivaLogo";
 import { format, parseISO } from 'date-fns';
 import { ReadingIcon } from '../components/ReadingIcon';
 import { getAllPosts, getAllSlugs } from './api/getPosts'
+import Link from 'next/link';
 
 export type Post = {
   author: string;
@@ -73,13 +74,15 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
           <ul className="self-center">
             {posts.map((v) => (
               <li key={v.title}>
-                <a href={`/posts/${v.slug}`}  className="flex flex-col">
-                  <span className="text-slate pb-3 text-center">
-                    By <strong>{v.author}</strong> at{" "}
-                    <time>{format(parseISO(v.date), "MMMM dd, yyyy")}</time>
-                  </span>
-                  <span className="text-2xl text-text">{v.title}</span>
-                </a>
+                <Link href={`/posts/${v.slug}`} passHref>
+                  <a className="flex flex-col">
+                    <span className="text-slate pb-3 text-center">
+                      By <strong>{v.author}</strong> at{" "}
+                      <time>{format(parseISO(v.date), "MMMM dd, yyyy")}</time>
+                    </span>
+                    <span className="text-2xl text-text">{v.title}</span>
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>
