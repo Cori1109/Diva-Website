@@ -9,10 +9,15 @@ export function getAllSlugs() {
 }
 
 export function getPostBySlug(slug: string) {
-  const realSlug = slug;
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fullPath = join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  return matter(fileContents);
+  const data = matter(fileContents)
+  
+  return {
+    content: data.content,
+    ...data.data,
+    slug,
+  };
 }
 
 export function getAllPosts() {
