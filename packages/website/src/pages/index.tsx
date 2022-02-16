@@ -3,10 +3,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react';
 import { DivaLogo, DivaType } from "../components/DivaLogo";
+import { format, parseISO } from 'date-fns';
 import { ReadingIcon } from '../components/ReadingIcon';
 import { getAllPosts, getAllSlugs } from './api/getPosts'
 
 export type Post = {
+  author: string;
   content: string;
   title: string;
   slug: string;
@@ -23,7 +25,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      posts,
+      posts: posts.map((v) => ({
+        ...v,
+        date: (v.date as unknown as Date).toISOString(),
+      })),
     },
   };
 };
@@ -46,8 +51,8 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
             />
             <DivaType className="stroke-text w-80 fill-text" />
           </figure>
-          <div className="text-center mr-3 flex align-center justify-center text-xl text-text pt-3 pb-11 space-x-9">
-            <p>The future of derivatives is almost here</p>
+          <div className="text-center mr-3 flex align-center justify-center text-2xl text-text pt-3 pb-11 space-x-12">
+            <p>The future of derivatives is here</p>
             <a
               className="mr-3 border-b pb-2"
               href="https://twitter.com/divaprotocol_io"
@@ -67,9 +72,14 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
           <ReadingIcon className="w-8 self-center" />
           <ul className="self-center">
             {posts.map((v) => (
-              <li key={v.title} className="flex flex-col">
-                <a className="text-xl text-text" href={`/posts/${v.slug}`}>{v.title}</a>
-                <time className="self-center pt-3">{v.date}</time>
+              <li key={v.title}>
+                <a href={`/posts/${v.slug}`}  className="flex flex-col">
+                  <span className="text-slate pb-3 text-center">
+                    By <strong>{v.author}</strong> at{" "}
+                    <time>{format(parseISO(v.date), "MMMM dd, yyyy")}</time>
+                  </span>
+                  <span className="text-2xl text-text">{v.title}</span>
+                </a>
               </li>
             ))}
           </ul>

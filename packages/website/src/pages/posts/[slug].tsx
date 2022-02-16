@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { Post } from '..';
 import { DivaLogo } from '../../components/DivaLogo';
+import { format, parseISO } from 'date-fns';
 import Tweet from 'react-tweet-embed'
 import { IMAGE_PATH } from '../../constants';
 // @ts-ignore
@@ -37,17 +38,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = getPostBySlug(params?.slug as string);
 
   const mdxSource = await serialize(post.content, {
-   // Optionally pass remark/rehype plugins
+    // Optionally pass remark/rehype plugins
     mdxOptions: {},
-    scope: post,
+    scope: {
+      ...post,
+      date: (post.date as unknown as Date).toISOString(),
+    },
   });
-
-  console.log({ mdxSource });
 
   return {
     props: {
       source: mdxSource,
-      post,
+      post: {
+        ...post,
+        date: (post.date as unknown as Date).toISOString(),
+      },
     },
   };
 };
@@ -78,6 +83,10 @@ const PostPage = ({ source, post }: PostPageProps) => {
         />
         <div className="pt-10 prose m-auto prose-slate">
           <h1>{post.title}</h1>
+          <p className="text-slate">
+            By <strong>{post.author}</strong> at{" "}
+            <time>{format(parseISO(post.date), "MMMM dd, yyyy")}</time>
+          </p>
           <MDXRemote {...source} components={components} />
         </div>
       </article>
