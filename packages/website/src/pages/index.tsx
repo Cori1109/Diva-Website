@@ -45,38 +45,37 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
 
       <main className="moving-gradient text-white overflow-auto">
         <div className="flex h-full flex-col">
-          <figure className="h-full flex flex-col justify-center items-center">
+          <figure className="h-3/4 md:h-full p-10 md:p-0 flex flex-col md:justify-center md:items-center">
             <DivaLogo
               className="stroke-text mb-16 w-40 max-w-xs"
               aria-label="Diva Protocol Logo"
             />
-            <DivaType className="stroke-text w-80 fill-text" />
+             <DivaType className="stroke-text w-80 max-w-full fill-text" />
           </figure>
-          <div className="px-10 text-center mr-3 md:flex flex-col md:flex-row align-center justify-center text-2xl text-text pt-3 pb-11 md:space-x-12">
-            <p>The future of derivatives is here</p>
+          <div className="px-10 md:text-center mr-3 md:flex flex-col md:flex-row align-center justify-center md:text-2xl text-text pt-3 pb-11 md:space-x-12">
+            <p className="pb-3">The future of derivatives is here</p>
             <a
               className="mr-3 border-b pb-2 inline-block"
               href="https://twitter.com/divaprotocol_io"
             >
               Twitter
             </a>
-
             <a
               className="mr-3 border-b pb-2 inline-block"
-              href="https://discord.gg/6xw3kEzc"
+              href="https://discord.gg/DE5b8ZeJjK"
             >
               Discord
             </a>
           </div>
         </div>
-        <div className="justify-center flex flex-col align-center space-y-20 pt-20 pb-44">
-          <ReadingIcon className="w-8 self-center" />
+        <div className="justify-center flex flex-col align-center space-y-20 pt-28 md:pt-60 pb-32 md:pb-44">
+          <ReadingIcon className="w-8 self-center opacity-50" />
           <ul className="self-center px-10">
             {posts.map((v) => (
               <li key={v.title}>
                 <Link href={`/posts/${v.slug}`} passHref>
                   <a className="flex flex-col">
-                    <span className="text-slate pb-3 text-center">
+                    <span className="text-slate pb-3 md:text-center">
                       By <strong>{v.author}</strong> at{" "}
                       <time>{format(parseISO(v.date), "MMMM dd, yyyy")}</time>
                     </span>
