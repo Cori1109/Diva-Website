@@ -50,7 +50,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
               className="stroke-text mb-16 w-40 max-w-xs"
               aria-label="Diva Protocol Logo"
             />
-             <DivaType className="stroke-text w-80 max-w-full fill-text" />
+            <DivaType className="stroke-text w-80 max-w-full fill-text" />
           </figure>
           <div className="px-10 md:text-center mr-3 md:flex flex-col md:flex-row align-center justify-center md:text-2xl text-text pt-3 pb-11 md:space-x-12">
             <p className="pb-3">The future of derivatives is here</p>
@@ -65,6 +65,12 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
               href="https://discord.gg/DE5b8ZeJjK"
             >
               Discord
+            </a>
+            <a
+              className="mr-3 border-b pb-2 inline-block"
+              href="/pdf/DIVA_Whitepaper_v1.0.0.pdf"
+            >
+              Whitepaper
             </a>
           </div>
         </div>
