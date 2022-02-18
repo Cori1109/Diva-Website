@@ -53,29 +53,40 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
             <DivaType className="stroke-text w-80 max-w-full fill-text" />
           </figure>
           <div className="px-10 md:text-center mr-3 md:flex flex-col md:flex-row align-center justify-center md:text-2xl text-text pt-3 pb-11 md:space-x-12">
-            <p className="pb-3">The future of derivatives is here</p>
-            <a
-              className="mr-3 border-b pb-2 inline-block"
-              href="https://twitter.com/divaprotocol_io"
-            >
-              Twitter
-            </a>
-            <a
-              className="mr-3 border-b pb-2 inline-block"
-              href="https://discord.gg/DE5b8ZeJjK"
-            >
-              Discord
-            </a>
-            <a
-              className="mr-3 border-b pb-2 inline-block"
-              href="/pdf/DIVA_Whitepaper_v1.0.0.pdf"
-            >
-              Whitepaper
-            </a>
+            <p className="pb-3 py-2">The future of derivatives is here</p>
+            <div className="space-x-10">
+              <a
+                className="inline-block py-1"
+                href="https://twitter.com/divaprotocol_io"
+              >
+                <Image
+                  width={30}
+                  height={40}
+                  alt="Discord"
+                  src="/images/twitter.svg"
+                />
+              </a>
+              <a
+                className="inline-block py-1"
+                href="https://discord.gg/DE5b8ZeJjK"
+              >
+                <Image
+                  width={30}
+                  height={40}
+                  alt="Discord"
+                  src="/images/discord.svg"
+                />
+              </a>
+              <a
+                className="inline-block py-1"
+                href="/pdf/DIVA_Whitepaper_v1.0.0.pdf"
+              >
+                <ReadingIcon aria-label="Read our Whitepaper" className="w-8" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="justify-center flex flex-col align-center space-y-20 pt-28 md:pt-60 pb-32 md:pb-44">
-          <ReadingIcon className="w-8 self-center opacity-50" />
           <ul className="self-center px-10">
             {posts.map((v) => (
               <li key={v.title}>
