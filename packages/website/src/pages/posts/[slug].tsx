@@ -64,9 +64,17 @@ const PostPage = ({ source, post }: PostPageProps) => {
         <title>Diva Protocol - {post.title}</title>
         <meta name="description" content={post.title} />
         <meta name="og:description" content={post.title} />
+        <meta name="twitter:description" content={post.title} />
         <meta name="og:image" content={post.coverImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={post.coverImage} />
         <link rel="icon" href="/logo.svg" />
         <meta name="og:title" content={post.title} />
+        <meta
+          name="twitter:title"
+          content="DIVA Protocol - Derivatives on the Ethereum blockchain"
+        />
+
       </Head>
       <nav className="p-5 pl-10 pt-8">
         <Link href="/" passHref>
