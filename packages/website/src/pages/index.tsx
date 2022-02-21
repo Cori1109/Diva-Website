@@ -6,6 +6,7 @@ import { format, parseISO } from 'date-fns';
 import { ReadingIcon } from '../components/ReadingIcon';
 import { getAllPosts, getAllSlugs } from './api/getPosts'
 import Link from 'next/link';
+import { HOME } from '../constants';
 
 export type Post = {
   author: string;
@@ -54,8 +55,8 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
         />
         <meta name="twitter:card" content="summary_large_image" />
 
-        <meta name="og:image" content="/logo.svg" />
-        <meta name="twitter:image" content="/logo.svg" />
+        <meta name="og:image" content={`${HOME}/logo.svg`} />
+        <meta name="twitter:image" content={`${HOME}/logo.svg`} />
         <meta
           name="og:title"
           content="DIVA Protocol - Derivatives on the Ethereum blockchain"

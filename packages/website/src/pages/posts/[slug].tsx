@@ -5,7 +5,7 @@ import { Post } from '..';
 import { DivaLogo } from '../../components/DivaLogo';
 import { format, parseISO } from 'date-fns';
 import Tweet from 'react-tweet-embed'
-import { IMAGE_PATH } from '../../constants';
+import { HOME, IMAGE_PATH } from '../../constants';
 // @ts-ignore
 import { getAllPosts, getPostBySlug } from '../api/getPosts';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
@@ -67,7 +67,7 @@ const PostPage = ({ source, post }: PostPageProps) => {
         <meta name="twitter:description" content={post.title} />
         <meta name="og:image" content={IMAGE_PATH + post.coverImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={IMAGE_PATH + post.coverImage} />
+        <meta name="twitter:image" content={HOME + IMAGE_PATH + post.coverImage} />
         <link rel="icon" href="/logo.svg" />
         <meta name="og:title" content={post.title} />
         <meta
