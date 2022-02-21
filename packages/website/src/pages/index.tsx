@@ -43,28 +43,25 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
           name="description"
           content="DIVA is an open and permissionless standard to create and settle derivative assets"
         />
-
         <link rel="icon" href="/logo.svg" />
-        <meta
-          name="og:description"
-          content="DIVA is an open and permissionless standard to create and settle derivative assets"
-        />
         <meta
           name="twitter:description"
           content="DIVA is an open and permissionless standard to create and settle derivative assets"
         />
         <meta name="twitter:card" content="summary_large_image" />
-
-
-        <meta property="og:image" content={`${HOME}/logo.svg`} />
-        <meta name="twitter:image:src" content={`${HOME}/logo.svg`} />
         <meta
-          name="og:title"
+          property="og:title"
           content="DIVA Protocol - Derivatives on the Ethereum blockchain"
         />
         <meta
           name="twitter:title"
           content="DIVA Protocol - Derivatives on the Ethereum blockchain"
+        />
+        <meta name="twitter:image:src" content={`${HOME}/logo.svg`} />
+        <meta property="og:image" content={`${HOME}/logo.svg`} />
+        <meta
+          property="og:description"
+          content="DIVA is an open and permissionless standard to create and settle derivative assets"
         />
       </Head>
 

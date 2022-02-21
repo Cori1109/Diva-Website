@@ -63,13 +63,13 @@ const PostPage = ({ source, post }: PostPageProps) => {
       <Head>
         <title>Diva Protocol - {post.title}</title>
         <meta name="description" content={post.title} />
-        <meta name="og:description" content={post.title} />
         <meta name="twitter:description" content={post.title} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:src" content={`${HOME}${IMAGE_PATH}${post.coverImage}`} />
         <meta property="og:image" content={`${HOME}${IMAGE_PATH}${post.coverImage}`} />
+        <meta property="og:description" content={post.title} />
+        <meta property="og:title" content={post.title} />
         <link rel="icon" href="/logo.svg" />
-        <meta name="og:title" content={post.title} />
         <meta
           name="twitter:title"
           content="DIVA Protocol - Derivatives on the Ethereum blockchain"
