@@ -62,7 +62,7 @@ const PostPage = ({ source, post }: PostPageProps) => {
     <>
       <Head>
         <title>Diva Protocol - {post.title}</title>
-        <meta name="description" content={post.title} />
+        <meta name="description" content={post.description} />
         <meta name="twitter:description" content={post.description} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:src" content={`${HOME}${IMAGE_PATH}${post.coverImage}`} />
