@@ -6,12 +6,13 @@ import { format, parseISO } from 'date-fns';
 import { ReadingIcon } from '../components/ReadingIcon';
 import { getAllPosts, getAllSlugs } from './api/getPosts'
 import Link from 'next/link';
-import { HOME } from '../constants';
+import { DESCRIPTION, HOME, TITLE } from '../constants';
 
 export type Post = {
   author: string;
   content: string;
   title: string;
+  description: string;
   slug: string;
   date: string;
   coverImage: string;
@@ -39,30 +40,15 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
     <>
       <Head>
         <title>Diva Protocol - Derivatives on the Ethereum blockchain</title>
-        <meta
-          name="description"
-          content="DIVA is an open and permissionless standard to create and settle derivative assets"
-        />
+        <meta name="description" content={DESCRIPTION} />
         <link rel="icon" href="/logo.svg" />
-        <meta
-          name="twitter:description"
-          content="DIVA is an open and permissionless standard to create and settle derivative assets"
-        />
+        <meta name="twitter:description" content={DESCRIPTION} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="og:title"
-          content="DIVA Protocol - Derivatives on the Ethereum blockchain"
-        />
-        <meta
-          name="twitter:title"
-          content="DIVA Protocol - Derivatives on the Ethereum blockchain"
-        />
+        <meta property="og:title" content={TITLE} />
+        <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:image:src" content={`${HOME}/logo.svg`} />
         <meta property="og:image" content={`${HOME}/logo.svg`} />
-        <meta
-          property="og:description"
-          content="DIVA is an open and permissionless standard to create and settle derivative assets"
-        />
+        <meta property="og:description" content={DESCRIPTION} />
       </Head>
 
       <main className="moving-gradient text-white overflow-auto">
