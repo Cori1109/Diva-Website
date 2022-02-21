@@ -55,8 +55,9 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
         />
         <meta name="twitter:card" content="summary_large_image" />
 
-        <meta name="og:image" content={`${HOME}/logo.svg`} />
-        <meta name="twitter:image" content={`${HOME}/logo.svg`} />
+
+        <meta property="og:image" content={`${HOME}/logo.svg`} />
+        <meta name="twitter:image:src" content={`${HOME}/logo.svg`} />
         <meta
           name="og:title"
           content="DIVA Protocol - Derivatives on the Ethereum blockchain"
