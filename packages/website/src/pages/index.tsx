@@ -87,9 +87,9 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
               </a>
               <a
                 className="inline-block py-1"
-                href="/pdf/DIVA_Whitepaper_v1.0.0.pdf"
+                href="https://docs.divaprotocol.io/"
               >
-                <ReadingIcon aria-label="Read our Whitepaper" className="w-8" />
+                <ReadingIcon aria-label="Read our Documentation" className="w-8" />
               </a>
             </div>
           </div>
