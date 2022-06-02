@@ -94,17 +94,20 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
             </div>
           </div>
         </div>
-        <div className="justify-center flex flex-col align-center space-y-20 pt-28 md:pt-60 pb-32 md:pb-44">
+        <div className='justify-center flex'>
+          <p className='text-3xl'>Blog posts</p>
+        </div>
+        <div className="justify-center flex flex-col align-center space-y-20 pt-28 md:pt-10 pb-32 md:pb-44">
           <ul className="self-center px-10">
             {posts.map((v) => (
-              <li key={v.title}>
+              <li className='md:pb-10' key={v.title}>
                 <Link href={`/posts/${v.slug}`} passHref>
                   <a className="flex flex-col">
                     <span className="text-slate pb-3 md:text-center">
                       By <strong>{v.author}</strong> at{" "}
                       <time>{format(parseISO(v.date), "MMMM dd, yyyy")}</time>
                     </span>
-                    <span className="text-2xl text-text">{v.title}</span>
+                    <span className="text-2xl text-text md:text-center">{v.title}</span>
                   </a>
                 </Link>
               </li>
