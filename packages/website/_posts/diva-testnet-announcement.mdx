@@ -2,9 +2,10 @@
 title: DIVA Protocol Testnet Launch
 description: Try out the DIVA App and get rewarded with a claim on the future DIVA token.
 date: 2022-06-06
+coverImage: logo_light_1045_200.png
 coverImageDescription: DIVA Testnet Announcement
-coverImageWidth: 1400
-coverImageHeight: 459
+coverImageWidth: 1045
+coverImageHeight: 200
 author: Wladimir Weinbender
 ---
 
@@ -20,9 +21,14 @@ a highly customizable and decentralized piece of infrastructure that allows user
 (so-called “derivatives“). The DIVA App allows users to create and trade a wide variety of derivative products which can 
 be used for hedging or betting purposes.
 
-## Learn-to-earn
+DIVA Protocol’s mission is to empower anyone to bring their betting and insurance product ideas to life in a permissionless way. 
+Whether you want to build a prediction markets platform like Augur, a platform selling insurance products to protect against DeFi 
+hacks, or create a simple webpage to allow users to bet on the outcome of the Champions League Finals, everything can be realized 
+using DIVA Protocol as the underlying technology.
 
-One of the initiatives that we will be running to coincide with the testnet launch is the Learn-to-earn program. 
+## Learn-to-earn
+![drake](../public/images/posts/drake.png)
+One of the initiatives that we will be running to coincide with the testnet launch is the **Learn-to-earn program**. 
 The goal of this program is to reward users with a claim on the future DIVA token for exploring the functionality offered by the DIVA App 
 and providing valuable feedback that will help us to further improve the app ahead of the mainnet launch later this year. 
 We believe that this approach is more likely to convert users into long-term believers and supporters compared to a random airdrop model. 
@@ -76,31 +82,37 @@ The completion of tasks will be assessed based on logged on-chain events and can
 To make things simpler for you, we have created a DIVA App Training in our gitbook that will guide you through the tasks. 
 Each task is already linked to the respective section in our gitbook.
 
-|Task|Points|
+|<font size="4">**Task**</font>|<font size="4">**Points**</font>|
 |:---|:---|
+|<font size="4">**Contingent pool creation**</font>||
 |[Create a pool with a binary payoff](https://docs.divaprotocol.io/guides/diva-app-training/create#create-position-tokens-with-a-binary-payoff)|200|
 |[Create a pool with a linear payoff](https://docs.divaprotocol.io/guides/diva-app-training/create#create-position-tokens-with-a-linear-payoff)|200|
 |[Create a pool with a convex long token payoff](https://docs.divaprotocol.io/guides/diva-app-training/create#create-position-tokens-with-a-convex-long-payoff-concave-short-payoff)|200|
 |[Create a pool with a concave long token payoff](https://docs.divaprotocol.io/guides/diva-app-training/create#create-position-tokens-with-a-concave-long-payoff-convex-short-payoff)|200|
+|<font size="4">**Adding/removing liquidity**</font>||
 |[Add liquidity to an existing pool](https://docs.divaprotocol.io/guides/diva-app-training/add#add-liquidity-to-an-existing-pool)|200|
 |[Remove liquidity from an existing pool](https://docs.divaprotocol.io/guides/diva-app-training/remove#remove-liquidity-from-an-existing-pool)|200|
-|[Create a BUY LIMIT Order that gets filled](https://docs.divaprotocol.io/guides/diva-app-training/trade#create-a-buy-limit-order)|200|
-|[Create a SELL LIMIT Order that gets filled](https://docs.divaprotocol.io/guides/diva-app-training/trade#create-a-sell-limit-order)|200|
+|<font size="4">**Trading**</font>||
+|[Create a BUY LIMIT Order that gets filled](https://docs.divaprotocol.io/guides/diva-app-training/trade#create-a-buy-limit-order)[^1]|200|
+|[Create a SELL LIMIT Order that gets filled](https://docs.divaprotocol.io/guides/diva-app-training/trade#create-a-sell-limit-order)[^1]|200|
 |[Fill a BUY LIMIT order via SELL MARKET](https://docs.divaprotocol.io/guides/diva-app-training/trade#fill-existing-buy-limit-orders-sell-market)|200|
 |[Fill a SELL LIMIT order via BUY MARKET](https://docs.divaprotocol.io/guides/diva-app-training/trade#fill-existing-sell-limit-orders-buy-market)|200|
+|<font size="4">**Manual settlement**[^2]</font>||
 |[Report final value](https://docs.divaprotocol.io/guides/diva-app-training/settle#report-final-value)|200|
 |[Challenge a reported value](https://docs.divaprotocol.io/guides/diva-app-training/settle#challenge-a-reported-value)|200|
+|<font size="4">**Redemption**</font>||
 |[Redeem position token](https://docs.divaprotocol.io/guides/diva-app-training/redeem)|200|
+|<font size="4">**Fee claim**</font>||
 |[Claim fees as a data provider](https://docs.divaprotocol.io/guides/diva-app-training/fees#claim-fees-as-a-data-provider)|200|
 |[Transfer fee claims](https://docs.divaprotocol.io/guides/diva-app-training/fees#transfer-fee-claims)|200|
-|**Total**|3000|
-|**With expert multiple (1.5x)**|4500|
-|**With whale multiple (3.0x)**|9000|
+|<font size="4">**Total**</font>| <font size="4">**3000**</font>|
+|<font size="4">**With expert multiple (1.5x)**</font>|<font size="4">**4500**</font>|
+|<font size="4">**With whale multiple (3.0x)**</font>|<font size="4">**9000**</font>|
 
-[1] It is important to highlight that placing a BUY/SELL LIMIT order is not enough to complete this task. The order has to be filled by 
+[^1]: It is important to highlight that placing a BUY/SELL LIMIT order is not enough to complete this task. The order has to be filled by 
 someone (it can be your own account) in order to be considered complete. The reason for that is that creating a BUY or SELL LIMIT order 
 is an off-chain operation. Only the execution of the order triggers an on-chain event that allows us to confirm the completion of the task.
-[2] Note that the manual reporting process of the final value and the possibility to challenge are only relevant for cases where human 
+[^2]: Note that the manual reporting process of the final value and the possibility to challenge are only relevant for cases where human 
 reporters are used as data providers. In most cases, we expect users to choose oracles that will automatically report the final value 
 and do not require their involvement.
 
