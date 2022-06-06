@@ -61,7 +61,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
             <DivaType className="stroke-text w-80 max-w-full fill-text" />
           </figure>
           <div className="px-10 md:text-center mr-3 md:flex flex-col md:flex-row align-center justify-center md:text-2xl text-text pt-3 pb-11 md:space-x-12">
-            <p className="pb-3 py-2">The future of derivatives is coming</p>
+            <p className="pb-3 py-2">Powering the world of derivatives</p>
             <div className="space-x-10">
               <a
                 className="inline-block py-1"
