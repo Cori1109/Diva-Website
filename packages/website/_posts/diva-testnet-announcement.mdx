@@ -21,9 +21,10 @@ customizable event-driven products (also known as "derivatives") in a permission
 (e.g., the price of an asset or a basket of assets, the TVL locked in DeFi, Ethereum gas price, Bitcoin hash rate, etc.) 
 and combine it with a wide range of possible payoff profiles (binary, linear, convex, or concave) to create truly unique products in DeFi.
 
-DIVA Protocol’s mission is to empower anyone to bring their betting and insurance product ideas to life in a permissionless way. 
+DIVA Protocol’s mission is to empower anyone to bring their betting and insurance product ideas to life in a permissionless way without the need to learn smart contract programming.
 Whether you want to build a prediction markets platform like Augur, a platform selling insurance products to protect against DeFi hacks, 
-or create a simple webpage to allow users to bet on the outcome of the Champions League Finals, everything can be powered by DIVA Protocol.
+or create a simple webpage to allow users to bet on the outcome of the Champions League Finals, everything can be realized using DIVA Protocol as the underlying 
+infrastructure.
 
 ## What is DIVA App?
 
@@ -32,8 +33,7 @@ the protocol through a user-friendly interface. They can create and redeem deriv
 In addition, DIVA App integrates [0x](https://www.0x.org/)'s limit order protocol, a decentralized offchain orderbook with an onchain settlement 
 model, to facilitate the exchange of those assets in a decentralized and gas-efficient way without giving up custody.
 
-Both the DIVA Protocol smart contracts as well as the app code will be open-sourced at mainnet launch later this year to inspire developers 
-to realize their own visions of derivative products and platforms.
+Both the DIVA Protocol smart contracts as well as the app code will be open-sourced at mainnet launch later this year which developers can use for reference.
 
 ## Learn-to-earn
 ![drake](/images/posts/drake.png)
@@ -74,26 +74,27 @@ interact with the DIVA App and later to claim the DIVA token. It should look as 
 
 ![register](/images/posts/register.png)
 - Hit Enter to confirm. In addition to the address registration, you will receive fake ERC20 tokens called dUSD 
-(address: 0x134e62bd2ee247d4186A1fdbaA9e076cb26c1355) and fake ETH on the Ropsten network that you will need to start 
-testing the app. Note that you will not be able to change the address afterwards! Further, note that each verified discord 
+(address: [0x134e62bd2ee247d4186A1fdbaA9e076cb26c1355](https://ropsten.etherscan.io/address/0x134e62bd2ee247d4186A1fdbaA9e076cb26c1355)) and fake ETH on the Ropsten network that you will need to start 
+testing the app. Note that you will not be able to change the address afterwards! Further, note that each verified Discord 
 user can only register one single account.
 - Type **/address** to confirm that your address has been registered. You can also use this command to check which 
 account you have registered in case you forget it.
-- Type **/claim-test-assets** tokens to receive more dUSD tokens for testing. Note that you can claim test assets once per day. 
-Further, note that you will not receive any ETH when running this command.
+- Type **/claim-test-assets** to receive more dUSD tokens for testing. Note that you can claim test assets once per day. 
+Further, note that you will not receive any ETH when running this command. Use [this](https://faucet.egorfine.com/) if you need more Ropsten ETH.
 
-All available commands to interact with our discord bot are also listed in the testnet channel:
+All available commands to interact with our Discord bot are also listed in the testnet channel:
 
 ![register](/images/posts/testnet_bot.png)
 
-You are now set up to start testing the app which you can access here: [app.diva.finance](app.diva.finance)
+Users have time to register and complete all tasks until **30th September 2022**. The testnet app will be published on Saturday, 
+11th June 2022 and the link to access the app will be announced in our social media channels.
 
 ### List of tasks
 
-The 15 tasks that testnet users are asked to complete are listed below as well as in the DIVA App under the Testnet Task tab. 
+The 15 tasks that testnet users are asked to complete are listed below as well as in the DIVA App under the **Testnet Task** tab. 
 The completion of tasks will be assessed based on logged on-chain events and can be tracked on the Testnet Task page. 
-To make things simpler for you, we have created a DIVA App Training in our gitbook that will guide you through the tasks. 
-Each task is already linked to the respective section in our gitbook.
+To make things simpler for you, we have created a DIVA App Training in our gitbook that will guide you through the tasks and linked all tasks 
+to the corresponding sections.
 
 |<font size="4">**Task**</font>|<font size="4">**Points**</font>|
 |:---|:---|
@@ -134,22 +135,22 @@ Details on the timeline for the mainnet launch will be announced after the testn
 
 ## Sybil protection
 
-Sybil attacks have become a real problem in the industry. To maximize the token allocation during an airdrop, some individuals or 
+One of the key concerns during any anticipated airdrop or token distribution event are Sybil attacks. To maximize the token allocation during token drops, some individuals or 
 organizations create multiple online accounts pretending to be independent and unique users. These so-called Sybil attackers exploit 
 the fact that it’s impossible to know who is behind each Ethereum account.
 
 In order to ensure a fair token distribution, it is critical to take precautionary measures to reduce the risk of such attacks. 
 The following summarizes the measures that we have taken to prevent such attacks:
-- Only verified discord users will be able to register for the testnet. We will retain the freedom to change the definition of a 
-“verified” discord user during the testnet.
-- Every verified discord user will be able to register one single address.
+- Only verified Discord users will be able to register for the testnet. We will retain the freedom to change the definition of a 
+“verified” Discord user during the testnet.
+- Every verified Discord user will be able to register one single address.
 - Our learn-to-earn program requires users to dig into the documentation and read how to complete the tasks.
 - To receive the 3.0x whale multiple, users will have to spend real assets to purchase an 888Whale NFT which sybil attackers 
 are unlikely to do. And if they do, those funds will directly flow back into the project.
 - The fact that users will earn a claim on the future DIVA token rather than the DIVA token directly, gives us 
 additional flexibility to exclude suspicious addresses in hindsight.
 
-We strongly recommend users stay active and visible in our Discord. Ask questions, participate in discussions or provide 
+We strongly recommend users to stay active and visible in our Discord. Ask questions, participate in discussions or provide 
 valuable feedback. This will help us to identify users that are here for the right reason. Saying “Hi” or “Gm” may not be enough.
 
 
@@ -161,7 +162,7 @@ better user experience. If data doesn’t refresh automatically, try to reload t
 
 Also, expect the app to break during the testnet phase. That’s desired behavior and will help us to identify weak points 
 and fix them before we launch on mainnet. If you spot any bugs or have proposals on how to further improve the current user experience, 
-let us know in our [feedback discord channel](https://discord.gg/NJDm29eEa4). This may earn you some bonus points 😉. Finally, we want to highlight that the current 
+let us know in our [feedback Discord channel](https://discord.gg/NJDm29eEa4). This may earn you some bonus points 😉. Finally, we want to highlight that the current 
 version of the app was not optimized for mobile or tablets. We recommend using a desktop computer for the best testing experience.
 
 We hope that you are as excited as we are about the DIVA testnet launch! [Register your wallet in our Discord](https://discord.gg/DE5b8ZeJjK) 
