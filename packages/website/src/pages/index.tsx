@@ -28,10 +28,14 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      posts: posts.map((v) => ({
-        ...v,
-        date: (v.date as unknown as Date).toISOString(),
-      })),
+      posts: posts
+        .map((v) => ({
+          ...v,
+          date: (v.date as unknown as Date).toISOString(),
+        }))
+        .sort((a, b) => {
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        }),
     },
   };
 };
