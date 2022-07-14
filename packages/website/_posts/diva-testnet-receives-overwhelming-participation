@@ -1,0 +1,70 @@
+---
+title: DIVA App Testnet Receives Overwhelming Participation
+description: Thousands of users participated in the DIVA App testnet so far.
+date: 2022-07-14T13:37:00.284Z
+coverImage: DIVA_notion_banner.png
+coverImageDescription: DIVA Testnet Update
+coverImageWidth: 1500
+coverImageHeight: 600
+author: Walodja1987
+---
+
+
+[DIVA App testnet](https://www.divaprotocol.io/posts/diva-testnet-announcement) went live on June 12, 2022, with a call on the Crypto community to participate and earn a claim on the future DIVA token. The response has been massive and pretty enlightening for the team. 
+
+Thousands of Crypto enthusiasts responded to our call and signed up to test the DIVA App, powered by DIVA Protocol, pointing us to some weaknesses needing modification. The outcome is significant to us in our mission to provide a robust decentralized application that empowers everyone to create a wide range of derivative products, including insurance, prediction/betting, and swaps. Those testing the system offer us the opportunity to receive essential feedback to achieve our goal. 
+
+A vibrant community is essential for the success of a Crypto venture. Refreshingly, the DIVA testnet has reemphasized this central element. 
+
+## Testnet statistics 
+
+Since its launch, more than 8’000 users have participated and created more than 80’000 products. Multiple [Youtube](https://www.youtube.com/results?search_query=diva+protocol+testnet) videos have been created by our community that guides members through the testnet tasks.
+
+Stimulatingly, the drill has impacted our community building and expansion appreciatively. The DIVA Discord community grew from 800 to more than 12’500 members within the exact time frame. 
+
+We are particularly proud that one of our tweets about the testnet got retweeted by the official Polygon Twitter account, which has over 1.5 million followers. 
+
+## Initial challenges
+
+Due to the incredibly high demand for testnet registrations, our Discord Bot was swamped and couldn't deliver just a day after the take-off. We had to halt registration temporarily to fix this anomaly. 
+
+The goal was to resolve the issues so our new testnet users could have the best experience trying out the app. We are grateful to the community for their understanding and patience. 
+
+Thankfully, we restored the system within a few hours and registration resumed without any blemish. The current focus is on processing the feedback to provide an app that delivers one of the best products in the DeFi space.
+
+## Feedback utilization
+
+The hefty load on the DIVA App has revealed some weaknesses, which have been addressed by our experienced Dev team and resulted in various improvements for our users. Here are some highlights:
+
+**Performance**: The loading times of the Markets and My Positions pages have been significantly improved thanks to smarter data loading.
+
+**Usability**: We have improved the UX on the Markets page by replacing the previous split into Main/Other on the Markets page (which was splitting into products created by DIVA Governance and others) with a Creator Filter. This changeover allows users to search for derivative products from specific addresses such as friends, Twitter individuals, etc., which means all products created by a particular address have a unique URL that allows creators and users to share them within their communities.
+
+**Congrats page**: We have added a congratulations page at the end of the creation process, which allows users to add the newly created position tokens to their Metamask wallet with a button click without the need to import them manually.
+
+**Bug fixes**: Several bugs related to creating and filling orders that have hindered some testnet participants from completing the trade-related tasks have been fixed.
+
+Apart from improving the functionality, we are also working on new app designs. Expect additional updates in the coming weeks as we work tirelessly to sweeten the performance and usability of the DIVA Protocol app.
+
+
+## Join DIVA App testnet
+
+You can still participate in this exciting development if you haven't registered for the testnet yet. It is running until September 30, 2022. 
+
+Kindly head to our [Discord](https://discord.com/invite/DE5b8ZeJjK) and sign up on the Register Channel to be a part of building the future of derivatives. Don't forget your participation in the testnet guarantees a share in the DIVA token when it is finally live.
+
+If you are interested in what we are building, here are the main links to get started:
+
+🚀 Testnet announcement: https://www.divaprotocol.io/posts/diva-testnet-announcement
+📚 Docs: https://docs.divaprotocol.io/
+🍏 DIVA Testnet App: https://app.diva.finance/
+
+Join Our community to be abreast with our ecosystem:
+
+- Website: https://www.divaprotocol.io/ 
+- App: https://app.diva.finance/
+- Twitter: https://twitter.com/divaprotocol_io 
+- Discord: https://discord.gg/8fAvUspmv3
+- Gitbook: https://docs.divaprotocol.io/ 
+
+Stay safe in these uncertain times!
