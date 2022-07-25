@@ -1,0 +1,83 @@
+---
+title: How DIVA Protocol can help unlock affordable insurance for African farmers
+description: DIVA Protocol empowers everyone to add a positive lasting impact on the world by creating conditional donation products 
+date: 2022-07-25T13:37:00.284Z
+coverImage: DIVA_notion_banner.png
+coverImageDescription: Farming
+coverImageWidth: 1500
+coverImageHeight: 600
+author: Frisco d'Anconia & Walodja1987
+---
+
+Countless African farmers cannot afford irrigation systems for farming and rely on climatic conditions to produce food. United Nations Environment Programme's (UNEP) statistics indicate that 95 percent of African food farming is rain-fed.
+
+Accordingly, weather-related hazards frustrate agricultural productivity payoffs, particularly in the face of climate change. When the rains fail to come, it is a financial disaster for many African households, especially in the rural communities.
+
+These factors constantly threaten food security and human well-being in the region. In 2021, droughts slashed into harvests across countries like Malawi, Rwanda, Tanzania, and Zambia—and thousands of hard-working farmers bumbled to make ends meet.
+
+## Agrarian insurance
+
+Agrarian insurance would have been the logical solution to the African farmers' hardships. However, traditional insurance services are generally costly, with high premiums and sluggish payouts. 
+
+As a result, agricultural insurance penetration among smallholder growers, who are the majority of African farmers, is low. In fact, overall, agrarian insurance across the continent is less than five percent. 
+
+Blockchain technology offers open and permissionless access to crucial financial infrastructure, which adds real-word value to society. One of such utilities is the DIVA Protocol.
+
+
+## DIVA Protocol changes the narratives
+
+DIVA Protocol is an open and permissionless infrastructure that lives on the Blockchain and allows everyone to create and settle derivative products, including insurance. Allowing anyone to use virtually any metric as the underlying and linking a customizable payoff profile to its outcomes opens unlimited possibilities to create insurance products that will benefit the world.
+
+Let’s look at how DIVA Protocol can be used to create an insurance product for farmers growing maize, one of the major crops in Nigeria. Maize’s minimum water need over the total growing period is 500mm. Choosing the rain amount during the total growing period as the underlying metric and attaching a payoff profile that will increasingly benefit the farmer as the actual rain amount goes below 500mm will neutralize the farmer’s incurred harvest loss due to a lack of rain. The point at which the maximum cover (USDC 1’000 in our example) is paid out is freely configurable in DIVA Protocol and has been set to 200mm for illustration purposes. 
+
+The maize farmer’s insurance product payoff is illustrated in the following chart:
+ 
+
+
+Similarly, any other event that can cause harvest losses or lower yield 
+such as flooding, wildfire, or locusts invasions can be used as the underlying metric.
+
+DIVA Protocol delivers a highly flexible tool to create robust hedge instruments against the adverse events that African farmers face. With the transparency of the Blockchain, its non-custodial nature, and the absence of third parties, farmers would have a far better insurance scheme than the traditional insurance market. Farmers can be certain to get paid without any delays whenever an insurance event occurs as the insurance cover is being held by a trustless smart contract rather than a trusted human individual.
+
+In the next section we explain how non-profit entities may step in as counterparties providing the insurance cover at subsidized rates to make such insurance products affordable for farmers.
+
+## Development Agencies And Charities 
+
+Various development agencies and charities are working with African farmers to improve their lots. DIVA Protocol offers a tool that these agencies and organizations can utilize to create sustainable farmer benefits without touching banking infrastructure.
+
+Instead of offering unconditional donations, charity organizations could use the contributions to provide conditional donations in the form of insurance products for farmers at subsidized rates. If an insurance event occurs, farmers will receive the benefit. If no insurance event occurs, the collected premium is reinvested into more insurance cover for farmers. 
+
+The key benefits of a conditional donation compared to a traditional one-off donation are:
+Donation is provided when it’s most needed by the farmers
+In the absence of an insurance event, the same capital can be reused numerous times and grow over time, reaching more needy farmers
+
+Such products act as a springboard for farmers to adjust to weather-related shocks and fight food insecurity and poverty.
+
+With DIVA Protocol being an open-source infrastructure, the creation of these products is not limited to charity organizations. Anyone can act as the counterparty and offer subsidized insurance products to farmers to help them focus on what they do best - tendering crops.
+
+
+## Join DIVA Protocol
+
+DIVA Protocol is open to collaboration with international development agencies, Non-Governmental Organizations, and other charity institutions to work with African farmers to ease their plight. Our platform offers the most innovative way to create a better situation for rural communities and those who eke out a living from the land in Africa.
+
+We can work together to create countless products covering various weather events that go against the farmer and livelihoods. These are strategies highly sustainable, empowering, and beneficial for society.
+
+Let's come together to deliver technology-backed solutions with a humane approach with the chance of replication. The Blockchain has a lot to offer humanity, and the DIVA Protocol is dedicated to playing our part in this evolution.
+
+If you are interested in what DIVA is building, here are the main links to get involved at no cost:
+
+- 🚀 Testnet announcement: https://www.divaprotocol.io/posts/diva-testnet-announcement
+- 📚 Docs: https://docs.divaprotocol.io/
+- 🍏 DIVA Testnet App: https://app.diva.finance/
+
+Join Our community to be abreast with our ecosystem:
+
+- Website: https://www.divaprotocol.io/
+- Twitter: https://twitter.com/divaprotocol_io 
+- Discord: https://discord.gg/8fAvUspmv3 
+
+Stay safe in these uncertain times!
+
+
+
+
