@@ -1,5 +1,5 @@
 ---
-title: DIVA development update August
+title: DIVA development update - August
 description: Slowly but surely
 date: 2022-08-31T13:37:00.284Z
 coverImage: Progress.png
@@ -9,7 +9,7 @@ coverImageHeight: 387
 author: Walodja1987
 ---
 
-We are excited to share an update on the latest developments around DIVA Protocol, the DIVA App, the on-going testnet and all on-going initiatives with our community. We keep the intro short as there is a lot to cover.
+We are excited to share the latest developments around DIVA Protocol, the DIVA App, the on-going testnet and all on-going initiatives with our community. We keep the intro short as there is a lot to cover.
 
 ## App
 Over the last couple of weeks, we have released the following new features in the app:
@@ -39,24 +39,35 @@ This will help to raise awareness about DIVA Protocol in the developer circles a
 
 ## Testnet
 The incentivized testnet has been an overwhelming success in all respects. We received a lot of helpful feedback from our users, fixed several bugs and were able to grow our discord community
-from 800 members to over 15k members. We can already announce that there will be another round of incentivized testnet where users will get a chance to earn additional rewards for trying out new features that we are currently
-developing for the app. Below are some relevant updates on the on-going test.
+from 800 members to over 15k members. The on-going testnet is running until September 30, 2022, but we can already announce that there will be another round of incentivized testnet where users will get a chance
+to earn additional rewards for trying out new features that we are currently developing for the protocol and the app. Below are some relevant updates on the on-going test.
+
+### Key testnet statistics
+1% (1 million tokens) of the total DIVA token supply was reserved for the on-going testnet which will be allocated to all testnet participants pro-rata to their points collected. If the testnet ended today, 
+each participant that has completed all the testnet tasks would be rewarded with slightly more than 200 DIVA tokens (c. $20 assuming a $10 million project valuation). Below the details including additional testnet statistics:
+* Total pools created: >60k
+* Unique addresses participated: >10k
+* Number users that completed all tasks: >2300
+* Total points collected: 21.3m
+* Total DIVA token reward pool: 1.0m
+* DIVA token reward for completing all tasks: 210 DIVA tokens 
+
+We would like to highlight the the completion of all testnet tasks will be beneficial for future reward rounds. 
 
 ### Migration from Ropsten to Goerli
 On 19th August, Graph Protocol stopped its support for Ropsten. As the DIVA App is using Graph Protocol to capture and display blockchain data in the app, we were forced to switch
-all parts of the app and testnet to Goerli, the new Ethereum test network. This move was expected and most of the preparations for the migration have been done on our side. Unfortunately, one important piece of infrastructure 
-that the DIVA App is using, namely the 0x api server which is maintained by the 0x protocol team and responsible for hosting signed trade orders, turned out to have limited functionality on Goerli. As a result, users
-were no longer able to trade and complete the four trade related testnet tasks. We are currently in the process of spinning up the api server ourselves to become and confident to enable the trading functionality soon. 
+all parts of the app and testnet to Goerli, the new Ethereum test network. This move was expected and most of the preparations for the migration have been done on our side. Unfortunately, one important piece of DIVA App's infrastructure 
+stack, namely the 0x api server which is maintained by the 0x protocol team and responsible for hosting signed trade orders, turned out to have limited functionality on Goerli. 
+As a result, users were no longer able to trade and complete the four trade related testnet tasks. We are currently in the process of spinning up the api server ourselves to become and confident to enable the trading
+functionality soon. 
 
 ### Testnet progress on Ropsten
 The testnet progress on the Ropsten network is saved. Users only have to complete those tasks on Goerli that remained open on Ropsten. We are currently in the process of integrating the Ropsten completion
 progress into the app to help users remember which ones were open.
 
-### Bug fixing
-
-Overall, no critical bugs anymore. All bugs reported during the early phase of the testnet were fixed and users are able to complete all tasks without any problems (assuming the trading part is functional again).
-
-### Testnet stats
+### State of the app
+Overall, there don't seem to be any critical bugs anymore. All bugs reported during the early phase of the testnet were fixed and users are able to complete all tasks without any problems
+(assuming the trading part is fully functional again).
 
 ## New DIVA website
 We are in the process of redesigning the [DIVA Protocol website](https://www.divaprotocol.io/) to present DIVA Protocol and its features in the best possible way. In particular,
@@ -65,52 +76,27 @@ we are planning to integrate an app store where we will start listing apps that 
 ## Quiz
 End of July, we announced an incentivized [quiz](https://www.divaprotocol.io/posts/diva-incentivized-diva-quiz) where we give users a chance to earn additional claims
 on the future DIVA token by proving their knowledge about DIVA Protocol and the DIVA App. The quiz has gained a lot of traction with 37 community members being able to secure a spot 
-on the leaderboard. It was particularly great to see that some members have built very solid knowledge  
+on the leaderboard. It was particularly great to see that some members have built very solid knowledge and leveraged that to earn additional DIVA tokens.  
 
-The quiz contributes to one of our main goals to built an informed and knowledgeable community to ensure the long-term success of the DIVA project.
-
-The quiz, where we ask questions at random points in time during the week and reward correct answers, gained a lot of traction. As of today, we count 37 community members on the leaderboard 
-
-The super quiz turned out where we give many community members a chance.
-
-were able to answer one of the posted questions and earn a claim on the future DIVA token. 
-It is great to see that some community members have already built very solid knowledge about DIVA Protocol and leverage that to increase their DIVA token reward.
+The quiz is one of many initiatives that we are planning to built an informed and knowledgeable community to ensure the long-term success of the DIVA project.
 If you haven't followed all the questions, we have compiled most of them here: [Quiz questions](https://docs.divaprotocol.io/guides/quiz)
 
-We have decided to not publish the answers to increase the learn effect ;-)
+We have decided to not publish the answers yet to increase the learn effect ;-)
 
 
 ## Tellor oracle integration
-We are closely working with the Tellor team to connect Tellor Protocol as the first decentralized to DIVA Protocol to give users the highest confidence that derivative products will settle correctly.
-
-## App migration
-
-## Testnet phase 2
+We are working closely with the Tellor team to integrated Tellor Protocol as the first decentralized oracle solution into DIVA Protocol to give users the highest confidence that derivative products will settle correctly.
+The connector smart contract is done and we are preparing it for audit now.
 
 ## Farmer insurance
-The [article on the farmer insurance](https://www.divaprotocol.io/posts/diva-how-diva-protocol-can-help-unlock-affordable-insurance-for-farmers) use case
- enabled by DIVA Protocol sparked some excitement with some organizations in Africa. We are currently exploring a pilot program with a set of farmers.
+The [article on the farmer insurance](https://www.divaprotocol.io/posts/diva-how-diva-protocol-can-help-unlock-affordable-insurance-for-farmers) use case enabled by DIVA Protocol sparked some excitement
+with some organizations in Africa. We are currently exploring a pilot program with a set of farmers to test it out. Stay tuned!
 
 
+## Join us
+DIVA Protocol will enable the peer-to-peer creation of financial derivative products and with that unlock use cases that haven't been possible before. If you are interested in what we are building, join us on 
+[Discord](https://discord.com/invite/DE5b8ZeJjK) and [Twitter](https://twitter.com/divaprotocol_io) and check out the following links:
 
-
-
-## Join DIVA App testnet
-
-You can still participate in this exciting development if you haven't registered for the testnet yet. It is running until September 30, 2022. 
-
-Kindly head to our [Discord](https://discord.com/invite/DE5b8ZeJjK) and sign up on the Register Channel to be a part of building the future of derivatives. Don't forget your participation in the testnet guarantees a share in the DIVA token when it is finally live.
-
-If you are interested in what we are building, here are the main links to get started:
-
-- 🚀 Testnet announcement: https://www.divaprotocol.io/posts/diva-testnet-announcement
+- 🚀 Website: https://www.divaprotocol.io/
 - 📚 Docs: https://docs.divaprotocol.io/
 - 🍏 DIVA Testnet App: https://app.diva.finance/
-
-Join Our community to be abreast with our ecosystem:
-
-- Website: https://www.divaprotocol.io/
-- Twitter: https://twitter.com/divaprotocol_io 
-- Discord: https://discord.gg/8fAvUspmv3 
-
-Stay safe in these uncertain times!
