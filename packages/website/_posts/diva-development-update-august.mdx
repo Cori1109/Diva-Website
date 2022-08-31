@@ -2,7 +2,7 @@
 title: DIVA development update - August
 description: Slowly but surely
 date: 2022-08-31T13:37:00.284Z
-coverImage: Progress.png
+coverImage: DIVA_notion_banner.png
 coverImageDescription: Progress
 coverImageWidth: 1024
 coverImageHeight: 387
@@ -23,7 +23,7 @@ well as parameters governing the shape of the payoff profile (floor, inflection,
 <p align="center">
   <img src="/images/posts/trade_chart.png" />
 </p>
-The following screenshot gives you an idea where we are heading in terms of design on the trading page.
+The following screenshot gives you preview of the new trade page design that we are working towards.
 <p align="center">
   <img src="/images/posts/new_trade_page.png" />
 </p>
@@ -38,7 +38,8 @@ The following screenshot gives you an idea where we are heading in terms of desi
 and take on the risk of not finding a counterparty. Instead, users will be able to create signed off-chain commitments to take either the long or short side of the derivative contract at very specific terms and share them 
 with potential counterparties via various off-chain communication channels (e.g., email or chat). The derivative products are created only once a counterparty is found. 
 Further, the Create Offer functionality will also remove the need for the creator to deposit the full collateral amount. Instead, a user can specify in the offer terms how much collateral each party has to contribute. With that,
-the sale of the long or short side, which in the current setup has to be conducted after a contingent pool has been created, would become part of the product creation process. 
+the sale of the long or short side, which in the current setup has to be conducted after a contingent pool has been created, would become part of the product creation process. The testing of the Create Offer flow will be part 
+of the second testnet phase. 
 * **Show best bid/ask on Markets page:** An efficient way to display the best bid/ask rates on the Markets page is under development.
 
 ## Smart contracts
@@ -54,12 +55,11 @@ to earn additional rewards for trying out new features that are currently under 
 
 ### Key testnet statistics
 We want to be transparent with our community and share the expected DIVA token reward from participating in our testnet. 1% (1 million tokens) of the total DIVA token supply was reserved for the on-going testnet which will be allocated to all testnet participants pro-rata to their points collected. If the testnet ended today, 
-each participant that has completed all the testnet tasks would be rewarded with slightly more than 200 DIVA tokens (c. $20 assuming a $10 million project valuation). Below the details including additional testnet statistics:
+each participant that has completed all the testnet tasks would be rewarded with slightly more than 210 DIVA tokens (c. $21 assuming a $10 million project valuation). Below the details including additional testnet statistics:
 * Total pools created: >60k
 * Unique addresses participated: >10k
 * Number users that completed all tasks: >2300
 * Total points collected: 21.3m
-* Total DIVA token reward pool: 1.0m
 * DIVA token reward for completing all tasks: 210 DIVA tokens 
 
 While further participation will dilute the testnet reward per user, we want to highlight that the completion of all testnet tasks will be beneficial for future reward rounds and initiatives. 
@@ -76,7 +76,7 @@ The testnet progress on the Ropsten network is saved. Users only have to complet
 progress into the app to help users remember which ones were open.
 
 ### State of the app
-Overall, there don't seem to be any critical bugs anymore. All bugs reported during the early phase of the testnet were fixed and users are able to complete all tasks without any problems
+Overall, there don't seem to be any critical bugs anymore. All bugs reported during the early phase of the testnet were fixed and users seem to able to complete all tasks without any problems
 (assuming the trading part is fully functional again). The current focus is on implementing the new app designs and make the app mobile-friendly.
 
 ## New DIVA website
@@ -86,10 +86,13 @@ we are planning to integrate an app store where we will start listing apps that 
 ## Quiz
 End of July, we announced an incentivized [quiz](https://www.divaprotocol.io/posts/diva-incentivized-diva-quiz) where we give users a chance to earn additional claims
 on the future DIVA token by proving their knowledge about DIVA Protocol and the DIVA App. The quiz has gained a lot of traction with 37 community members being able to secure a spot 
-on the leaderboard. It was particularly great to see that some members have built very solid knowledge and leveraged that to earn additional DIVA tokens.  
+on the leaderboard. It was particularly great to see that some members have built very solid knowledge and leveraged that to earn additional DIVA tokens. 
+
+Unfortunately, the quiz was interrupted for a few days due to the issues that we experienced during the migration. We expect to resume the quiz very soon. 
 
 The quiz is one of many initiatives that we are planning to build an informed and knowledgeable community.
-If you haven't followed all the questions but want to test your knowledge about DIVA Protocol, head over to our [documentation](https://docs.divaprotocol.io/guides/quiz) where you will find all questions. We have decided to not publish the answers yet to increase the learn effect ;-)
+If you haven't followed all the questions but want to test your knowledge about DIVA Protocol, head over to our [documentation](https://docs.divaprotocol.io/guides/quiz) where you will find all questions. 
+It was a conscious decision to not publish the answers yet to increase the learn effect ;-)
 
 ## Tellor oracle integration
 We are closely working with the Tellor team to integrate [Tellor Protocol](https://tellor.io/) as the first decentralized oracle solution into DIVA Protocol to give users the highest confidence that derivative products will settle correctly.
