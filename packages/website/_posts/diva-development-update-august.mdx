@@ -9,36 +9,47 @@ coverImageHeight: 387
 author: Walodja1987
 ---
 
-We are excited to share an update on the latest developments around DIVA Protocol, the DIVA App, the on-going testnet and all on-going initiatives. 
+We are excited to share an update on the latest developments around DIVA Protocol, the DIVA App, the on-going testnet and all on-going initiatives with our community. We keep the intro short as there is a lot to cover.
 
 ## App
 Over the last couple of weeks, we have released the following new features in the app:
-* **Card view:** Users can now switch between Line view and Card view on the Markets page. The Card view was primarily designed for users that want to access the app from their mobile.
-* **Trade chart:** In preparation for the redesign of the trading page, we have moved the payoff chart more prominently into the middle of
-the page and consolidated a lot of information that was previously spread across the page. For instance, terms like "Gradient" and "Inflection" are no longer visible making
-it easier for visitors to digest the information. Also, information like the current underlying, break-even as well as the parameters governing the shape of the payoff curve have been baked
-into the chart.
-* **Filters:** We have revisited the filters on the Markets and My Dashboard page and updated the design to better fit into the overall app design
-* **Mobile friendly create process:** We have adjusted the Create flow to be compatible with mobile format.  
-
-* **App designs:** The app designs are now ready and being implemented.
+* **Card view:** Users can now switch between Line view and Card view on the Markets page. The Card view was primarily designed to have a mobile-friendly way to display the products and their details on the Markets page.
+* **Trade chart:** In preparation for the re-design of the trading page, we have upgraded the payoff chart design, moved it more prominently into the middle of
+the page and consolidated a lot of information that was previously spread across the page. For instance, the current underlying value, the break-even as 
+well as parameters governing the shape of the payoff profile (floor, inflection, cap and gradient) are now baked into the chart.
+* **Filters:** We have re-visited the functionality and updated the design of the filters on the Markets and My Dashboard page.
+* **Mobile responsiveness:** We have made the Create flow as well as the Testnet tasks page more mobile-friendly. We are working on making the remaining parts of the app over the coming weeks.   
 
 
-Pending
-
-Released:
-
-
-In progress:
-* **Create offer flow:** Currently, the creation of a contingent pool requires the user to deposit all the collateral. 
-* **Show best bid/ask on Markets page:**
-* **Fix 0x server:** 
-
-
+**In progress:**
+* **New app design:** All app designs have been finalized and are now being implemented. Here a few exclusive insights.
+* **Create Offer flow:** We are adding an option for users to create derivative products in a more gas efficient and flexible way. Users will no longer have to create derivative products on-chain
+and take on the risk of not finding a counterparty. Instead, users will be able to create signed off-chain commitments to take either the long or short side of the derivative contract at very specific terms and share them 
+with potential counterparties via various off-chain communication channels (e.g., email or chat). The derivative products are created only once a counterparty is found. 
+Further, the Create Offer functionality will also remove the need for the creator to deposit the full collateral amount. Instead, a user can specify in the offer terms how much collateral each party has to contribute. With that,
+the sale of the long or short side, which in the current setup has to be conducted after a contingent pool has been created, would become part of the product creation process. 
+* **Show best bid/ask on Markets page:** An efficient way to display the best bid/ask rates on the Markets page is under development.
 
 ## Smart contracts
-* 
+* The EIP712 module which enables the Create Offer flow described above has been integrated into DIVA Protocol. We are preparing everything for another audit to 
+ensure that the new functionality is bug-free.
+* We are planning an incentivized code review program where we will invite Solidity developers and reward them in claims on the future DIVA token for reviewing and providing feedback on the code.
 
+## Testnet
+### Migration from Ropsten to Goerli
+On 19th August, Graph Protocol stopped its support for Ropsten. As the DIVA App is using Graph Protocol to capture and display blockchain data in the app, we were forced to switch
+all parts of the app to Goerli, the new Ethereum test network. This move was expected and most of the preparations for the migration have been done on our side. Unfortunately, one important piece of infrastructure, namely 
+the 0x api server which is maintained by the 0x protocol team and responsible for hosting signed trade orders, turned out to have limited functionality on Goerli. As a result, users were no longer able to trade and 
+complete the four trade related testnet tasks. 
+
+For those that participated in the testnet while it was running on Ropsten, all progress is saved. Users have to complete only those tasks that were open on Ropsten. We are in the process of integrating the Ropsten completion
+status into the app to avoid any confusion.
+
+The good thing about all this is that it forced us to look into how to run the server ourselves. We are confident to fix the trading functionality soon.
+
+
+
+### Testnet stats
 
 ## New DIVA website
 We are in the process of redesigning the [DIVA Protocol website](https://www.divaprotocol.io/) to present DIVA Protocol and its features in the best possible way. In particular,
@@ -75,12 +86,7 @@ The [article on the farmer insurance](https://www.divaprotocol.io/posts/diva-how
 
 
 
-## Testnet
-On 19th August, Graph Protocol, which the DIVA App is using under the hood to capture blockchain data, announced that it stopped supporting Ropsten, the testnet that the DIVA testnet was running on. 
-This meant that blockchain data emitted during the  Testnet transactions (e.g., when creating a contingent pool) were no longer indexed and as a result not showing up in the app. This was expected and
-all preparations for the switch to the new test network Goerli were already done. 
 
-Show Ropsten progress
 
 ## Join DIVA App testnet
 
