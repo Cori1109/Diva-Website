@@ -31,23 +31,30 @@ the sale of the long or short side, which in the current setup has to be conduct
 * **Show best bid/ask on Markets page:** An efficient way to display the best bid/ask rates on the Markets page is under development.
 
 ## Smart contracts
-* The EIP712 module which enables the Create Offer flow described above has been integrated into DIVA Protocol. We are preparing everything for another audit to 
-ensure that the new functionality is bug-free.
-* We are planning an incentivized code review program where we will invite Solidity developers and reward them in claims on the future DIVA token for reviewing and providing feedback on the code.
+* The EIP712 module which enables the Create Offer flow described above has been integrated into DIVA Protocol. We are preparing everything for another audit round to 
+ensure that the new functionality is bug-free and secure.
+* Before we go to audit, we are planning an incentivized code review program where we will invite Solidity developers and reward them in claims on the future DIVA token for reviewing and providing feedback on the code. 
+This will help to raise awareness about DIVA Protocol in the developer circles and foster adoption when it is launched on mainnet. 
+
 
 ## Testnet
+The incentivized testnet has been an overwhelming success in all respects. We received a lot of helpful feedback from our users, fixed several bugs and were able to grow our discord community
+from 800 members to over 15k members. We can already announce that there will be another round of incentivized testnet where users will get a chance to earn additional rewards for trying out new features that we are currently
+developing for the app. Below are some relevant updates on the on-going test.
+
 ### Migration from Ropsten to Goerli
 On 19th August, Graph Protocol stopped its support for Ropsten. As the DIVA App is using Graph Protocol to capture and display blockchain data in the app, we were forced to switch
-all parts of the app to Goerli, the new Ethereum test network. This move was expected and most of the preparations for the migration have been done on our side. Unfortunately, one important piece of infrastructure, namely 
-the 0x api server which is maintained by the 0x protocol team and responsible for hosting signed trade orders, turned out to have limited functionality on Goerli. As a result, users were no longer able to trade and 
-complete the four trade related testnet tasks. 
+all parts of the app and testnet to Goerli, the new Ethereum test network. This move was expected and most of the preparations for the migration have been done on our side. Unfortunately, one important piece of infrastructure 
+that the DIVA App is using, namely the 0x api server which is maintained by the 0x protocol team and responsible for hosting signed trade orders, turned out to have limited functionality on Goerli. As a result, users
+were no longer able to trade and complete the four trade related testnet tasks. We are currently in the process of spinning up the api server ourselves to become and confident to enable the trading functionality soon. 
 
-For those that participated in the testnet while it was running on Ropsten, all progress is saved. Users have to complete only those tasks that were open on Ropsten. We are in the process of integrating the Ropsten completion
-status into the app to avoid any confusion.
+### Testnet progress on Ropsten
+The testnet progress on the Ropsten network is saved. Users only have to complete those tasks on Goerli that remained open on Ropsten. We are currently in the process of integrating the Ropsten completion
+progress into the app to help users remember which ones were open.
 
-The good thing about all this is that it forced us to look into how to run the server ourselves. We are confident to fix the trading functionality soon.
+### Bug fixing
 
-
+Overall, no critical bugs anymore. All bugs reported during the early phase of the testnet were fixed and users are able to complete all tasks without any problems (assuming the trading part is functional again).
 
 ### Testnet stats
 
