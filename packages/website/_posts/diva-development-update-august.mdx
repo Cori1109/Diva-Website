@@ -1,0 +1,112 @@
+---
+title: DIVA development update - August
+description: Slowly but surely
+date: 2022-08-31T13:37:00.284Z
+coverImage: DIVA_notion_banner.png
+coverImageDescription: Progress
+coverImageWidth: 1024
+coverImageHeight: 387
+author: Walodja1987
+---
+
+We are excited to share the latest developments around DIVA Protocol, the DIVA App, the on-going testnet and all on-going initiatives with our community. We keep the intro short as there is a lot to cover.
+
+## App
+Over the last couple of weeks, we have released the following new features in the app:
+* **Card view:** Users can now switch between Line view and Card view on the Markets page. The Card view was primarily designed to have a mobile-friendly way to display the products and their details on the Markets page.
+<p align="center">
+  <img src="/images/posts/card_view.png" />
+</p>
+* **Trade chart:** In preparation for the re-design of the trading page, we have upgraded the payoff chart design, moved it more prominently into the middle of
+the page and consolidated a lot of information that was previously spread across the page. For instance, the current underlying value, the break-even as 
+well as parameters governing the shape of the payoff profile (floor, inflection, cap and gradient) are now baked into the chart.
+<p align="center">
+  <img src="/images/posts/trade_chart.png" />
+</p>
+The following screenshot gives you preview of the new trade page design that we are working towards.
+<p align="center">
+  <img src="/images/posts/new_trade_page.png" />
+</p>
+* **Filters (release imminent):** We have re-visited the functionality and updated the design of the filters on the Markets and My Dashboard page.
+<p align="center">
+  <img src="/images/posts/filter.png" />
+</p>
+* **Mobile responsiveness:** We have made the Create flow as well as the Testnet tasks page more mobile-friendly. We are working on making the remaining parts of the app responsive.   
+
+**In progress:**
+* **Create Offer flow:** We are adding an option for users to create derivative products in a more gas efficient and flexible way. Users will no longer have to create derivative products on-chain
+and take on the risk of not finding a counterparty. Instead, users will be able to create signed off-chain commitments to take either the long or short side of the derivative contract at very specific terms and share them 
+with potential counterparties via various off-chain communication channels (e.g., email or chat). The derivative products are created only once a counterparty is found. 
+Further, the Create Offer functionality will also remove the need for the creator to deposit the full collateral amount. Instead, a user can specify in the offer terms how much collateral each party has to contribute. With that,
+the sale of the long or short side, which in the current setup has to be conducted after a contingent pool has been created, would become part of the product creation process. The testing of the Create Offer flow will be part 
+of the second testnet phase. 
+* **Show best bid/ask on Markets page:** An efficient way to display the best bid/ask rates on the Markets page is under development.
+
+## Smart contracts
+* The EIP712 module which enables the Create Offer flow described above has been integrated into DIVA Protocol. We are preparing everything for another audit round to 
+ensure that the new functionality is bug-free and secure.
+* Before we go to audit, we are planning an incentivized code review program where we will invite Solidity developers and reward them in claims on the future DIVA token for reviewing and providing feedback on the code. 
+This will help to raise awareness about DIVA Protocol in developer circles and foster adoption when it is launched on mainnet. 
+
+## Testnet
+The incentivized testnet has been an overwhelming success in all respects. We received a lot of helpful feedback from our users, fixed several bugs and were able to grow our discord community
+from 800 to over 15k members. The on-going testnet is running until September 30, 2022, but we can already announce that there will be another round of incentivized testnet where users will get a chance
+to earn additional rewards for trying out new features that are currently under development.
+
+### Key testnet statistics
+We want to be transparent with our community and share the expected DIVA token reward from participating in our testnet. 1% (1 million tokens) of the total DIVA token supply was reserved for the on-going testnet which will be allocated to all testnet participants pro-rata to their points collected. If the testnet ended today, 
+each participant that has completed all the testnet tasks would be rewarded with slightly more than 210 DIVA tokens (c. $21 assuming a $10 million project valuation). Below the details including additional testnet statistics:
+* Total pools created: >60k
+* Unique addresses participated: >10k
+* Number users that completed all tasks: >2300
+* Total points collected: 21.3m
+* DIVA token reward for completing all tasks: 210 DIVA tokens 
+
+While further participation will dilute the testnet reward per user, we want to highlight that the completion of all testnet tasks will be beneficial for future reward rounds and initiatives. 
+
+### Migration from Ropsten to Goerli
+On 19th August, Graph Protocol stopped its support for Ropsten. As the DIVA App is using Graph Protocol to capture and display blockchain data in the app, we were forced to switch
+all parts of the app and testnet to Goerli, the new Ethereum test network. This move was expected and most of the preparations for the migration have been done on our side. Unfortunately, one important piece of DIVA App's infrastructure 
+stack, namely the 0x api server which is maintained by the 0x protocol team and responsible for hosting signed trade orders, turned out to have limited functionality on Goerli. 
+As a result, users were no longer able to trade and complete the four trade related testnet tasks. We are currently in the process of spinning up the api server ourselves to become more independent. We are confident to enable the trading
+functionality soon. 
+
+### Testnet progress on Ropsten
+The testnet progress on the Ropsten network is saved. Users only have to complete those tasks on Goerli that remained open on Ropsten. We are currently in the process of integrating the Ropsten completion
+progress into the app to help users remember which ones were open.
+
+### State of the app
+Overall, there don't seem to be any critical bugs anymore. All bugs reported during the early phase of the testnet were fixed and users seem to able to complete all tasks without any problems
+(assuming the trading part is fully functional again). The current focus is on implementing the new app designs and make the app mobile-friendly.
+
+## New DIVA website
+We are in the process of redesigning the [DIVA Protocol website](https://www.divaprotocol.io/) to present DIVA Protocol and its features in the best possible way. In particular,
+we are planning to integrate an app store where we will start listing apps that are built on top of DIVA Protocol with DIVA App being the first one. 
+
+## Quiz
+End of July, we announced an incentivized [quiz](https://www.divaprotocol.io/posts/diva-incentivized-diva-quiz) where we give users a chance to earn additional claims
+on the future DIVA token by proving their knowledge about DIVA Protocol and the DIVA App. The quiz has gained a lot of traction with 37 community members being able to secure a spot 
+on the leaderboard. It was particularly great to see that some members have built very solid knowledge and leveraged that to earn additional DIVA tokens. 
+
+Unfortunately, the quiz was interrupted for a few days due to the issues that we experienced during the migration. We expect to resume the quiz very soon. 
+
+The quiz is one of many initiatives that we are planning to build an informed and knowledgeable community.
+If you haven't followed all the questions but want to test your knowledge about DIVA Protocol, head over to our [documentation](https://docs.divaprotocol.io/guides/quiz) where you will find all questions. 
+It was a conscious decision to not publish the answers yet to increase the learn effect ;-)
+
+## Tellor oracle integration
+We are closely working with the Tellor team to integrate [Tellor Protocol](https://tellor.io/) as the first decentralized oracle solution into DIVA Protocol to give users the highest confidence that derivative products will settle correctly.
+The connector smart contract is done and we are currently testing the reporting software. The testing of the Tellor integration will be part of the second phase of the incentivized testnet. Stay tuned for an announcement. 
+
+## Farmer insurance
+The [article on the farmer insurance](https://www.divaprotocol.io/posts/diva-how-diva-protocol-can-help-unlock-affordable-insurance-for-farmers) use case sparked some excitement
+with some organizations in Africa. We are currently exploring a pilot program with a set of farmers to test it out. Stay tuned!
+
+
+## Join us
+DIVA Protocol will enable the peer-to-peer creation of financial derivative products and with that unlock use cases that haven't been possible before. If you are interested in what we are building, join us on 
+[Discord](https://discord.com/invite/DE5b8ZeJjK) and [Twitter](https://twitter.com/divaprotocol_io) and check out the following links:
+
+- 🚀 Website: https://www.divaprotocol.io/
+- 📚 Docs: https://docs.divaprotocol.io/
+- 🍏 DIVA Testnet App: https://app.diva.finance/
