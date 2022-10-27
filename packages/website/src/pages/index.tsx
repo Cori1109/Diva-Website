@@ -53,7 +53,6 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
       window?.localStorage.setItem("DIVA-BANNER-REMINDER", "TRUE");
     }
   }, [displayBanner]);
-
   return (
     <>
       <Head>
@@ -86,7 +85,6 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
           </button>
         </header>
       )}
-
       <main className="moving-gradient text-white overflow-auto">
         <div className="flex h-full flex-col">
           <figure className="h-3/4 md:h-full p-10 md:p-0 flex flex-col md:justify-center md:items-center">
@@ -104,6 +102,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
               Launch Testnet App
             </a>
           </p>
+
 
           <div className="px-10 md:text-center mr-3 md:flex flex-col md:flex-row align-center justify-center md:text-2xl text-text pt-3 pb-11 md:space-x-12">
             <p className="pb-3 py-2">Powering the world of derivatives</p>
