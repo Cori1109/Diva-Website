@@ -8,7 +8,7 @@ import rewards from "./rewards.json"
 import {useCustomMediaQuery} from "../../hooks/useCustomMediaQuery";
 const Rewards = () => {
     const { isMobile } = useCustomMediaQuery()
-    const userAddress = '0x9b515f56e787c3dceffeafc7c07bdadc4343a9eb' //useAppSelector(selectUserAddress)
+    const userAddress = '0x0000000000ce6d8c1fba76f26d6cc5db71432710' //useAppSelector(selectUserAddress)
     const chainId = useAppSelector(selectChainId)
     const theme = useTheme()
     const [rewardInfo, setRewardInfo] = useState<any>({})
@@ -26,11 +26,11 @@ const Rewards = () => {
                     paddingTop: theme.spacing(4),
                     marginLeft: '33%'
                 }}>
-                    <Typography sx={{ marginLeft:theme.spacing(2) }} variant="h2">
+                    <Typography sx={{ marginLeft:theme.spacing(2), color: 'white' }} variant="h2">
                         $DIVA Token Claim
                     </Typography>
                     <Typography variant="h6">
-                        $DIVA is the new governance token for DIVA Protocol DAO.
+                        $DIVA is the governance token for DIVA Protocol.
                     </Typography>
                     {userAddress === undefined && (<Typography variant="body1">
                         Connect your wallet to determine your eligibility.
@@ -82,7 +82,7 @@ const Rewards = () => {
                                     sx={{ paddingTop:theme.spacing(3), paddingBottom:theme.spacing(3), justifyContent: 'space-between' }}
                                 >
                                     <Typography color="common.white">Your $DIVA token reward</Typography>
-                                    <Typography color="common.white">{rewardInfo.reward}</Typography>
+                                    <Typography color="common.white">{Number(rewardInfo.reward).toFixed(1)}</Typography>
                                 </Stack>
                             </Stack>
 
