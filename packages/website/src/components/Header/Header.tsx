@@ -62,7 +62,7 @@ export default function Header() {
   return (
     <>
 
-        <Toolbar sx={{ flexDirection:'column', alignItems: 'end'}}>
+        <Toolbar sx={{ marginTop:theme.spacing(4), flexDirection:'column', alignItems: 'end'}}>
           {isMobile && (
             <IconButton
               size="large"

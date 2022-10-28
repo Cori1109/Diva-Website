@@ -8,13 +8,13 @@ import rewards from "./rewards.json"
 import {useCustomMediaQuery} from "../../hooks/useCustomMediaQuery";
 const Rewards = () => {
     const { isMobile } = useCustomMediaQuery()
-    const userAddress = useAppSelector(selectUserAddress)
+    const userAddress = '0x9b515f56e787c3dceffeafc7c07bdadc4343a9eb' //useAppSelector(selectUserAddress)
     const chainId = useAppSelector(selectChainId)
     const theme = useTheme()
     const [rewardInfo, setRewardInfo] = useState<any>({})
     useEffect(() => {
         rewards.forEach((reward) => {
-            if (reward.address === userAddress && reward.reward !== "") {
+            if (reward.address === userAddress) {
                 setRewardInfo(reward)
             }
         })
@@ -22,8 +22,11 @@ const Rewards = () => {
     return (
             <Stack>
                 <Header />
-                <Container sx={{ paddingTop: theme.spacing(4), marginLeft: '33%' }}>
-                    <Typography variant="h2">
+                <Container sx={{
+                    paddingTop: theme.spacing(4),
+                    marginLeft: '33%'
+                }}>
+                    <Typography sx={{ marginLeft:theme.spacing(2) }} variant="h2">
                         $DIVA Token Claim
                     </Typography>
                     <Typography variant="h6">
@@ -39,10 +42,10 @@ const Rewards = () => {
                     You are eligible for token claim, below are the details of your participation.
                     </Typography>)}
 
-                    {userAddress !== undefined && rewardInfo !== {} &&(
+                    {userAddress !== undefined && rewardInfo.reward === "" &&(
                         <Chip style={{ marginTop: theme.spacing(3), width: '47%', color:'white', background: 'orange'}} label={"You are not eligible. Reason: " + rewardInfo.comment} />
                     )}
-                    {userAddress !== undefined && rewardInfo.comment === '' && (<Card
+                    {userAddress !== undefined && rewardInfo.reward !== '' && (<Card
                         style={{
                             maxWidth: '47%',
                             marginTop: theme.spacing(6),
@@ -97,12 +100,9 @@ const Rewards = () => {
                             >
                                 Claim
                             </LoadingButton>
-                            <Chip style={{ width: '50%', color:'white', background: 'orange'}} variant="outlined" label="You will be able to claim your rewards once the token launches"/>
+                            <Chip style={{ width: '50%', color:'orange'}} variant="outlined" label="You will be able to claim your rewards once the token launches"/>
                         </Stack>
                     )}
-                    {userAddress !== undefined && rewardInfo.comment === '' && ( <Typography sx={{ pt: theme.spacing(2)}} variant="h4">
-                        You are not eligible for token claim.
-                    </Typography>)}
                 </Container>
             </Stack>
 
