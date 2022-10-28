@@ -61,14 +61,8 @@ export default function Header() {
 
   return (
     <>
-      <AppBar
-        sx={{
-          position: 'sticky',
-          background: theme.palette.secondary,
-          boxShadow: 'none',
-        }}
-      >
-        <Toolbar>
+
+        <Toolbar sx={{ flexDirection:'column', alignItems: 'end'}}>
           {isMobile && (
             <IconButton
               size="large"
@@ -83,7 +77,7 @@ export default function Header() {
           )}
           <ConnectWalletButton />
         </Toolbar>
-      </AppBar>
+
       <Drawer
         anchor={'left'}
         open={isMobileMenuOpen}

@@ -97,9 +97,15 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
           <p className="justify-center text-2xl full-width text-center mb-20">
             <a
               href="https://app.diva.finance/"
-              className="bg-blue text-white  p-4 rounded-sm uppercase space-x-4 animate-pulse"
+              className=" mr-1 bg-blue text-white  p-4 rounded-sm uppercase space-x-4 animate-pulse"
             >
               Launch Testnet App
+            </a>
+            <a
+                href="/rewards"
+                className="ml-1 bg-blue text-white  p-4 rounded-sm uppercase space-x-4 animate-pulse"
+            >
+              $DIVA Token Claim
             </a>
           </p>
 
