@@ -8,7 +8,7 @@ import rewards from "./rewards.json"
 import {useCustomMediaQuery} from "../../hooks/useCustomMediaQuery";
 const Rewards = () => {
     const { isMobile } = useCustomMediaQuery()
-    const userAddress = '0x9adefeb576dcf52f5220709c1b267d89d5208d77' //useAppSelector(selectUserAddress)
+    const userAddress = useAppSelector(selectUserAddress)
     const chainId = useAppSelector(selectChainId)
     const theme = useTheme()
     const [rewardInfo, setRewardInfo] = useState<any>({})
@@ -97,7 +97,7 @@ const Rewards = () => {
                             >
                                 Claim
                             </LoadingButton>
-                            <Chip style={{ width: '100%', color:'orange'}} variant="outlined" label="You will be able to claim your rewards once the token launches"/>
+                            <Chip style={{ width: '100%', color:'orange'}} label="You will be able to claim your rewards once the token launches"/>
                         </Stack>
                     )}
                     {userAddress !== undefined && rewardInfo.reward === undefined &&(
