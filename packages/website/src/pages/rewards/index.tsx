@@ -35,7 +35,7 @@ const Rewards = () => {
                     {userAddress !== undefined && rewardInfo === {} && (
                         <Chip style={{ marginTop: theme.spacing(3), width: '47%', color:'white', background: 'orange'}} label={"Connected account was not registered for the testnet"} />
                     )}
-                    {userAddress !== undefined && rewardInfo.reward !== "" && (<Typography variant="body1">
+                    {userAddress !== undefined && rewardInfo.reward !== undefined && rewardInfo.reward !== "" && (<Typography variant="body1">
                     You are eligible for token claim, below are the details of your participation.
                     </Typography>)}
 
