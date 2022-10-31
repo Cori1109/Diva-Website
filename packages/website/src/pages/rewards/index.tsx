@@ -12,7 +12,6 @@ const Rewards = () => {
     const chainId = useAppSelector(selectChainId)
     const theme = useTheme()
     const [rewardInfo, setRewardInfo] = useState<any>({})
-    console.log(rewardInfo)
     useEffect(() => {
         rewards.forEach((reward) => {
             if (reward.address === userAddress) {
