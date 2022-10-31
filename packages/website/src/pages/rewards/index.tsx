@@ -8,10 +8,11 @@ import rewards from "./rewards.json"
 import {useCustomMediaQuery} from "../../hooks/useCustomMediaQuery";
 const Rewards = () => {
     const { isMobile } = useCustomMediaQuery()
-    const userAddress = '0x0000000000ce6d8c1fba76f26d6cc5db71432710' //useAppSelector(selectUserAddress)
+    const userAddress = '0x9adefeb576dcf52f5220709c1b267d89d5208d77' //useAppSelector(selectUserAddress)
     const chainId = useAppSelector(selectChainId)
     const theme = useTheme()
     const [rewardInfo, setRewardInfo] = useState<any>({})
+    console.log(rewardInfo)
     useEffect(() => {
         rewards.forEach((reward) => {
             if (reward.address === userAddress) {
@@ -22,10 +23,7 @@ const Rewards = () => {
     return (
             <Stack>
                 <Header />
-                <Container sx={{
-                    paddingTop: theme.spacing(4),
-                    marginLeft: '33%'
-                }}>
+                <Container style={{flexDirection:'column', display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
                     <Typography sx={{ marginLeft:theme.spacing(2), color: 'white' }} variant="h2">
                         $DIVA Token Claim
                     </Typography>
@@ -38,16 +36,16 @@ const Rewards = () => {
                     {userAddress !== undefined && rewardInfo === {} && (
                         <Chip style={{ marginTop: theme.spacing(3), width: '47%', color:'white', background: 'orange'}} label={"Connected account was not registered for the testnet"} />
                     )}
-                    {userAddress !== undefined && rewardInfo !== {} && (<Typography variant="body1">
+                    {userAddress !== undefined && rewardInfo.reward !== "" && (<Typography variant="body1">
                     You are eligible for token claim, below are the details of your participation.
                     </Typography>)}
 
                     {userAddress !== undefined && rewardInfo.reward === "" &&(
                         <Chip style={{ marginTop: theme.spacing(3), width: '47%', color:'white', background: 'orange'}} label={"You are not eligible. Reason: " + rewardInfo.comment} />
                     )}
-                    {userAddress !== undefined && rewardInfo.reward !== '' && (<Card
+                    {userAddress !== undefined && rewardInfo.reward !== undefined && rewardInfo.reward !== '' && (<Card
                         style={{
-                            maxWidth: '47%',
+                            minWidth: '47%',
                             marginTop: theme.spacing(6),
                             border: '1px solid #1B3448',
                             background:
@@ -88,24 +86,26 @@ const Rewards = () => {
 
                         </Container>
                     </Card>)}
-                    {userAddress !== undefined && rewardInfo.comment === '' && (
+                    {userAddress !== undefined && rewardInfo.reward !== undefined && rewardInfo.reward !== '' && (
                         <Stack spacing={3}>
                             <LoadingButton
                                 loading={chainId == null}
                                 type="submit"
                                 value="Submit"
-                                sx={{ marginTop: theme.spacing(4), marginLeft: theme.spacing(6), width: '40%' }}
+                                sx={{ marginTop: theme.spacing(4) }}
                                 disabled={true}
                                 style={{ background: 'darkgray', outline:'gray', color: 'white' }}
                             >
                                 Claim
                             </LoadingButton>
-                            <Chip style={{ width: '50%', color:'orange'}} variant="outlined" label="You will be able to claim your rewards once the token launches"/>
+                            <Chip style={{ width: '100%', color:'orange'}} variant="outlined" label="You will be able to claim your rewards once the token launches"/>
                         </Stack>
+                    )}
+                    {userAddress !== undefined && rewardInfo.reward === undefined &&(
+                        <Chip style={{ marginTop: theme.spacing(3), width: '47%', color:'white', background: 'orange'}} label={"You are not eligible. Reason: Not registered"} />
                     )}
                 </Container>
             </Stack>
-
     )
 }
 
