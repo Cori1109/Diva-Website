@@ -14,7 +14,7 @@ const Rewards = () => {
     const [rewardInfo, setRewardInfo] = useState<any>({})
     useEffect(() => {
         rewards.forEach((reward) => {
-            if (reward.address.toLowerCase() === userAddress.toLowerCase()) {
+            if (reward.address === userAddress) {
                 setRewardInfo(reward)
             }
         })
