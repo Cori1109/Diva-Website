@@ -101,14 +101,12 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
             >
               Launch Testnet App
             </a>
-            <a
-                href="/rewards"
-                className="ml-1 bg-blue text-white p-4 rounded-sm uppercase space-x-4 animate-pulse"
-            >
-              $DIVA Token Claim
-            </a>
+            <Link href="/rewards" passHref>
+              <a className="ml-1 bg-blue text-white p-4 rounded-sm uppercase space-x-4 animate-pulse">
+                $DIVA Token Claim
+              </a>
+            </Link>
           </p>
-
 
           <div className="px-10 md:text-center mr-3 md:flex flex-col md:flex-row align-center justify-center md:text-2xl text-text pt-3 pb-11 md:space-x-12">
             <p className="pb-3 py-2">Powering the world of derivatives</p>
