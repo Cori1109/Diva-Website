@@ -20,7 +20,7 @@ export function ConnectWalletButton() {
       type="submit"
       value="Submit"
       sx={{ marginLeft: '10px' }}
-      onClick={() => (isConnected && userAddress ? disconnect() : connect())}
+      onClick={() => (isConnected && userAddress ? disconnect?.() : connect())}
     >
       {isConnected && userAddress
         ? getShortenedAddress(userAddress)
