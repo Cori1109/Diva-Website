@@ -10,8 +10,8 @@ import {
 } from '../../constants'
 import styled from '@emotion/styled'
 import CloseIcon from '@mui/icons-material/Close'
-import { useAppSelector } from '../../Redux/hooks'
-import { selectChainId } from '../../Redux/appSlice'
+import { useAppSelector } from '../../redux/hooks'
+import { selectChainId } from '../../redux/appSlice'
 import { utils } from 'ethers'
 import Tooltip from '@mui/material/Tooltip'
 
@@ -43,7 +43,7 @@ const NetworkInfo = ({
   chainId: SupportedChainId
   onClose: () => void
 }) => {
-  const { name, logoUrl } = config[chainId]
+  const { name } = config[chainId];
   const theme = useTheme()
   const connectedChainId = useAppSelector(selectChainId)
   const isSupportedChain = CURRENT_SUPPORTED_CHAIN_ID.includes(chainId)
@@ -62,7 +62,7 @@ const NetworkInfo = ({
   }
 
   return (
-    <Tooltip title={!isSupportedChain ? 'Coming soon' : ''}>
+    <Tooltip title={!isSupportedChain ? "Coming soon" : ""}>
       <NetworkInfoContainer
         theme={theme}
         onClick={handleNetworkClick}
@@ -70,14 +70,14 @@ const NetworkInfo = ({
       >
         <>
           <div>
-            <img
+            {/*<img
               src={logoUrl}
               alt={name}
               style={{
                 width: '40px',
                 marginRight: '12px',
               }}
-            />
+            />*/}
           </div>
           <div>
             <Typography variant="h3">{name}</Typography>
@@ -87,13 +87,13 @@ const NetworkInfo = ({
                 opacity: 0.5,
               }}
             >
-              {connectedChainId === chainId ? 'Connected' : ''}
+              {connectedChainId === chainId ? "Connected" : ""}
             </Typography>
           </div>
         </>
       </NetworkInfoContainer>
     </Tooltip>
-  )
+  );
 }
 
 const ChainSelectorModal = ({ onClose, isOpen }: ChainSelectorModalProps) => {

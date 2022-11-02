@@ -1,7 +1,6 @@
 import { Box, Button, Tooltip } from '@mui/material'
 import { Stack } from '@mui/material'
 import { Link, matchPath, useLocation } from 'react-router-dom'
-import { APP_BAR_ITEMS, ICONS_URL } from '../../constants'
 import { useState } from 'react'
 import ArrowRightIcon from '@mui/icons-material/ArrowRight'
 
@@ -16,21 +15,21 @@ export default function MenuItems() {
       justifyContent="flex-start"
       alignItems="center"
       marginTop="16px"
-      width={navOpen ? '182px' : '67px'}
+      width={navOpen ? "182px" : "67px"}
       sx={{
-        position: 'relative',
+        position: "relative",
       }}
     >
       <Link to="/">
         <Box
           sx={{
             width: 30,
-            display: 'flex',
-            justifyContent: 'center',
-            minHeight: '50px',
+            display: "flex",
+            justifyContent: "center",
+            minHeight: "50px",
           }}
         >
-          <img
+          {/*<img
             src={ICONS_URL.divaSidebarLogo}
             alt="diva"
             width={!navOpen ? '24px' : '0'}
@@ -39,16 +38,16 @@ export default function MenuItems() {
             src={ICONS_URL.divaTextLogo}
             alt="diva"
             width={navOpen ? '90px' : '0'}
-          />
+        />*/}
         </Box>
       </Link>
       <Box
         sx={{
-          marginTop: '80px',
-          borderTop: '1px solid #4F4F4F',
+          marginTop: "80px",
+          borderTop: "1px solid #4F4F4F",
         }}
       >
-        {APP_BAR_ITEMS.map(({ label, to, icon, isRoot }, key) => {
+        {/*APP_BAR_ITEMS.map(({ label, to, icon, isRoot }, key) => {
           const Icon = icon
           const isActive =
             isRoot && location.pathname.startsWith('/markets/')
@@ -98,34 +97,34 @@ export default function MenuItems() {
               </Box>
             </Link>
           )
-        })}
+        })*/}
       </Box>
       <Button
         onClick={() => setNavOpen(!navOpen)}
         style={{
-          position: 'absolute',
-          background: '#4F4F4F',
-          borderRadius: '0px 5px 5px 0px',
-          height: '24.1px',
-          minWidth: '23px',
-          zIndex: '9999999999',
-          padding: '0px',
-          top: '76px',
-          right: '-25px',
-          color: '#121212',
+          position: "absolute",
+          background: "#4F4F4F",
+          borderRadius: "0px 5px 5px 0px",
+          height: "24.1px",
+          minWidth: "23px",
+          zIndex: "9999999999",
+          padding: "0px",
+          top: "76px",
+          right: "-25px",
+          color: "#121212",
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            transform: `${navOpen ? 'rotate(180deg)' : 'rotate(0deg)'}`,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            transform: `${navOpen ? "rotate(180deg)" : "rotate(0deg)"}`,
           }}
         >
           <ArrowRightIcon />
         </Box>
       </Button>
     </Stack>
-  )
+  );
 }

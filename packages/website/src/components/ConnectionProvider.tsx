@@ -27,7 +27,7 @@ type ConnectionContextType = {
 
 export const ConnectionContext = createContext<ConnectionContextType>({})
 
-const ethereum = typeof window !== "undefined" ? window.ethereum : null
+const ethereum = window.ethereum;
 
 export const ConnectionProvider = ({ children }) => {
   const [{ connected }, setConnectionState] = useLocalStorage<{
@@ -111,12 +111,12 @@ export const ConnectionProvider = ({ children }) => {
       setState((_state) => ({ ..._state, isConnected: ethereum.isConnected() }))
     })
 
-    detectEthereumProvider().then((provider: MetamaskProvider) =>
+    detectEthereumProvider().then((provider) => {
       setState((_state) => ({
         ..._state,
         provider: new providers.Web3Provider(provider),
-      }))
-    )
+      }));
+    });
     if (connected) connect()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
