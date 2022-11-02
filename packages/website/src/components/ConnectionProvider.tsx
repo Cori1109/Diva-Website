@@ -6,12 +6,6 @@ import detectEthereumProvider from '@metamask/detect-provider'
 import { useDispatch } from 'react-redux'
 import { setChainId, setUserAddress } from '../redux/appSlice'
 
-type MetamaskProvider = ExternalProvider &
-  BaseProvider & {
-    isConnected: () => boolean
-    chainId: string
-  }
-
 type ConnectionContextState = {
   chainId?: number
   error?: string
@@ -26,8 +20,6 @@ type ConnectionContextType = {
 } & ConnectionContextState
 
 export const ConnectionContext = createContext<ConnectionContextType>({})
-
-const ethereum = window.ethereum;
 
 export const ConnectionProvider = ({ children }) => {
   const [{ connected }, setConnectionState] = useLocalStorage<{
@@ -50,16 +42,18 @@ export const ConnectionProvider = ({ children }) => {
   }, [dispatch, state.address])
 
   const connect = useCallback(async () => {
-    const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+    const accounts = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
     setState((_state) => ({
       ..._state,
       address: accounts[0],
-      chainId: BigNumber.from(ethereum.chainId).toNumber(),
-      isConnected: ethereum.isConnected() && accounts.length > 0,
-    }))
-    setConnectionState({ connected: 'metamask' })
+      chainId: BigNumber.from(window.ethereum.chainId).toNumber(),
+      isConnected: window.ethereum.isConnected() && accounts.length > 0,
+    }));
+    setConnectionState({ connected: "metamask" });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   const disconnect = useCallback(() => {
     setState((_state) => ({
@@ -74,7 +68,7 @@ export const ConnectionProvider = ({ children }) => {
   }, [])
 
   useEffect(() => {
-    if (!ethereum?.isMetaMask) {
+    if (!window.ethereum?.isMetaMask) {
       setState((_state) => ({
         ..._state,
         error: 'Please install metamask',
@@ -82,8 +76,8 @@ export const ConnectionProvider = ({ children }) => {
       return
     }
 
-    ethereum.on('accountsChanged', (accounts) => {
-      ethereum.request({ method: 'eth_accounts' }).then((res) => {
+    window.ethereum.on('accountsChanged', (accounts) => {
+      window.ethereum.request({ method: 'eth_accounts' }).then((res) => {
         if (res.length > 0) {
           connect()
         } else {
@@ -92,23 +86,23 @@ export const ConnectionProvider = ({ children }) => {
       })
     })
 
-    ethereum.on('chainChanged', (chainInfo) => {
+    window.ethereum.on('chainChanged', (chainInfo) => {
       setState((_state) => ({
         ..._state,
-        chainId: BigNumber.from(ethereum.chainId).toNumber(),
+        chainId: BigNumber.from(window.ethereum.chainId).toNumber(),
       }))
     })
 
-    ethereum.on('connect', (connectInfo) => {
+    window.ethereum.on('connect', (connectInfo) => {
       setState((_state) => ({
         ..._state,
-        isConnected: ethereum.isConnected(),
+        isConnected: window.ethereum.isConnected(),
         chainId: BigNumber.from(connectInfo.chainId).toNumber(),
       }))
     })
 
-    ethereum.on('disconnect', () => {
-      setState((_state) => ({ ..._state, isConnected: ethereum.isConnected() }))
+    window.ethereum.on('disconnect', () => {
+      setState((_state) => ({ ..._state, isConnected: window.ethereum.isConnected() }))
     })
 
     detectEthereumProvider().then((provider) => {
