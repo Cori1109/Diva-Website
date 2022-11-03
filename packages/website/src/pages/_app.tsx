@@ -3,15 +3,46 @@ import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 import store from '../redux/Store'
 import {ConnectionProvider} from "../components/ConnectionProvider";
+import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
+import { Global, css } from "@emotion/react";
 
-function MyApp({ Component, pageProps }: any) {
+import { Fonts } from "../Fonts/Fonts";
+
+const theme = extendTheme({
+  fonts: {
+    heading: "Roboto",
+    body: "Roboto Mono",
+  },
+});
+
+const GlobalStyle = () => {
+  return (
+    <>
+      <CSSReset />
+      <Global
+        styles={css`
+          html {
+            scroll-behavior: smooth;
+            background-color: #000000;
+          }
+        `}
+      />
+    </>
+  );
+};
+
+const App = ({ Component, pageProps }) => {
   return (
     <Provider store={store}>
       <ConnectionProvider>
-        <Component {...pageProps} />
+        <ChakraProvider theme={theme}>
+          <GlobalStyle />
+          <Fonts />
+          <Component {...pageProps} />
+        </ChakraProvider>
       </ConnectionProvider>
     </Provider>
   );
-}
+};
 
-export default MyApp
+export default App;

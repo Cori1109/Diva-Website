@@ -61,30 +61,31 @@ export default function Header() {
 
   return (
     <>
-
-        <Toolbar sx={{ marginTop:theme.spacing(4), flexDirection:'column', alignItems: 'end'}}>
-          {isMobile && (
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-              onClick={() => setIsMobileMenuOpen(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-          <ConnectWalletButton />
-        </Toolbar>
+      <Toolbar
+        sx={{ marginTop: 12, flexDirection: "column", alignItems: "end" }}
+      >
+        {isMobile && (
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
+        <ConnectWalletButton />
+      </Toolbar>
 
       <Drawer
-        anchor={'left'}
+        anchor={"left"}
         open={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
       >
         <MobileMenuList onClose={() => setIsMobileMenuOpen(false)} />
       </Drawer>
     </>
-  )
+  );
 }

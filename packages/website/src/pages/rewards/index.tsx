@@ -7,7 +7,6 @@ import {
   useTheme,
 } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import Header from "../../components/Header/Header";
 import { useAppSelector } from "../../redux/hooks";
 import { selectChainId, selectUserAddress } from "../../redux/appSlice";
 import { useEffect, useState } from "react";
@@ -32,7 +31,6 @@ const Rewards = () => {
   }, [userAddress]);
   return (
     <Stack>
-      <Header />
       <Container
         style={{
           flexDirection: "column",
@@ -42,10 +40,7 @@ const Rewards = () => {
           height: "50vh",
         }}
       >
-        <Typography
-          sx={{ marginLeft: theme.spacing(2), color: "white" }}
-          variant="h2"
-        >
+        <Typography sx={{ color: "white" }} variant="h2">
           $DIVA Token Claim
         </Typography>
         <Typography variant="h6">
@@ -56,10 +51,9 @@ const Rewards = () => {
             Connect your wallet to determine your eligibility.
           </Typography>
         )}
-        {userAddress !== undefined && rewardInfo === {} && (
+        {userAddress !== undefined && rewardInfo == null && (
           <Chip
             style={{
-              marginTop: theme.spacing(3),
               width: "47%",
               color: "white",
               background: "orange",
@@ -79,7 +73,6 @@ const Rewards = () => {
         {userAddress !== undefined && rewardInfo.reward === "" && (
           <Chip
             style={{
-              marginTop: theme.spacing(3),
               width: "47%",
               color: "white",
               background: "orange",
@@ -93,7 +86,6 @@ const Rewards = () => {
             <Card
               style={{
                 minWidth: "47%",
-                marginTop: theme.spacing(6),
                 border: "1px solid #1B3448",
                 background:
                   "linear-gradient(180deg, #051827 0%, rgba(1, 12, 39, 0) 100%)",
@@ -104,7 +96,6 @@ const Rewards = () => {
                   <Stack
                     direction={"row"}
                     sx={{
-                      paddingTop: theme.spacing(3),
                       justifyContent: "space-between",
                     }}
                   >
@@ -132,8 +123,6 @@ const Rewards = () => {
                   <Stack
                     direction={"row"}
                     sx={{
-                      paddingTop: theme.spacing(3),
-                      paddingBottom: theme.spacing(3),
                       justifyContent: "space-between",
                     }}
                   >
@@ -151,12 +140,11 @@ const Rewards = () => {
         {userAddress !== undefined &&
           rewardInfo.reward !== undefined &&
           rewardInfo.reward !== "" && (
-            <Stack spacing={3}>
+            <Stack>
               <LoadingButton
                 loading={chainId == null}
                 type="submit"
                 value="Submit"
-                sx={{ marginTop: theme.spacing(4) }}
                 disabled={true}
                 style={{
                   background: "darkgray",
@@ -175,7 +163,6 @@ const Rewards = () => {
         {userAddress !== undefined && rewardInfo.reward === undefined && (
           <Chip
             style={{
-              marginTop: theme.spacing(3),
               width: "47%",
               color: "white",
               background: "orange",
