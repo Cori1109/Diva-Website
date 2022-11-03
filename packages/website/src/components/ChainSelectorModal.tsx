@@ -1,19 +1,15 @@
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import Modal from '@mui/material/Modal'
-import { useTheme, Theme } from '@mui/material/styles'
 import {
   ALL_SUPPORTED_CHAIN_IDS,
   config,
   CURRENT_SUPPORTED_CHAIN_ID,
   SupportedChainId,
-} from '../../constants'
+} from '../constants'
 import styled from '@emotion/styled'
-import CloseIcon from '@mui/icons-material/Close'
-import { useAppSelector } from '../../redux/hooks'
-import { selectChainId } from '../../redux/appSlice'
+import { useAppSelector } from '../redux/hooks'
+import { selectChainId } from '../redux/appSlice'
 import { utils } from 'ethers'
-import Tooltip from '@mui/material/Tooltip'
+import { Box, Modal, Text, Tooltip } from '@chakra-ui/react'
+import { CloseIcon } from '@chakra-ui/icons'
 
 interface ChainSelectorModalProps {
   onClose: () => void
@@ -21,20 +17,18 @@ interface ChainSelectorModalProps {
 }
 
 const NetworkInfoContainer = styled.div<{
-  theme: Theme
-  isSupportedChain: boolean
+  isSupportedChain: boolean;
 }>`
   display: flex;
   padding: 14px;
   align-items: center;
   border: 1px solid rgb(67, 72, 77);
-  cursor: ${(props) => (props.isSupportedChain ? 'pointer' : 'not-allowed')};
+  cursor: ${(props) => (props.isSupportedChain ? "pointer" : "not-allowed")};
   opacity: ${(props) => (props.isSupportedChain ? 1 : 0.5)};
-
   &:hover {
-    border: 1px solid ${(props) => props.theme.palette.primary.main};
+    border: 1px solid;
   }
-`
+`;
 
 const NetworkInfo = ({
   chainId,
@@ -44,7 +38,6 @@ const NetworkInfo = ({
   onClose: () => void
 }) => {
   const { name } = config[chainId];
-  const theme = useTheme()
   const connectedChainId = useAppSelector(selectChainId)
   const isSupportedChain = CURRENT_SUPPORTED_CHAIN_ID.includes(chainId)
 
@@ -64,7 +57,6 @@ const NetworkInfo = ({
   return (
     <Tooltip title={!isSupportedChain ? "Coming soon" : ""}>
       <NetworkInfoContainer
-        theme={theme}
         onClick={handleNetworkClick}
         isSupportedChain={isSupportedChain}
       >
@@ -80,15 +72,14 @@ const NetworkInfo = ({
             />*/}
           </div>
           <div>
-            <Typography variant="h3">{name}</Typography>
-            <Typography
-              variant="h6"
+            <Text>{name}</Text>
+            <Text
               sx={{
                 opacity: 0.5,
               }}
             >
               {connectedChainId === chainId ? "Connected" : ""}
-            </Typography>
+            </Text>
           </div>
         </>
       </NetworkInfoContainer>
@@ -97,59 +88,47 @@ const NetworkInfo = ({
 }
 
 const ChainSelectorModal = ({ onClose, isOpen }: ChainSelectorModalProps) => {
-  const theme = useTheme()
-
   return (
     <Modal
-      open={isOpen}
+      isOpen={isOpen}
       onClose={onClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
-      sx={{
-        backdropFilter: 'blur(5px)',
-      }}
     >
       <Box
         sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
           width: 400,
-          bgcolor: theme.palette.background.default,
           boxShadow: 24,
           p: 4,
-          color: theme.palette.text.primary,
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          <Typography
-            id="modal-modal-title"
-            variant="h3"
-            component="h3"
-            fontWeight={700}
-          >
+          <Text id="modal-modal-title" fontWeight={700}>
             Select network
-          </Typography>
+          </Text>
 
           <CloseIcon
             sx={{
-              cursor: 'pointer',
+              cursor: "pointer",
             }}
             onClick={onClose}
           />
         </Box>
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gridGap: '16px',
-            marginTop: '16px',
+            display: "flex",
+            flexDirection: "column",
+            gridGap: "16px",
+            marginTop: "16px",
           }}
         >
           {ALL_SUPPORTED_CHAIN_IDS.map((chainId) => (
@@ -158,7 +137,7 @@ const ChainSelectorModal = ({ onClose, isOpen }: ChainSelectorModalProps) => {
         </Box>
       </Box>
     </Modal>
-  )
+  );
 }
 
 export default ChainSelectorModal

@@ -1,10 +1,10 @@
-import { Chip } from '@mui/material'
-import { useConnectionContext } from '../../hooks/useConnectionContext'
-import { selectChainId, selectUserAddress } from '../../redux/appSlice'
-import { useAppSelector } from '../../redux/hooks'
 import ChainSelectorModal from './ChainSelectorModal'
 import { useState } from 'react'
-import { config } from '../../constants'
+import config from 'next/config'
+import { useConnectionContext } from '../hooks/useConnectionContext'
+import { selectChainId, selectUserAddress } from '../redux/appSlice'
+import { useAppSelector } from '../redux/hooks'
+import { Badge } from '@chakra-ui/react'
 
 export function NetworkTag() {
   const { isConnected } = useConnectionContext()
@@ -17,18 +17,16 @@ export function NetworkTag() {
   if (isConnected && userAddress) {
     return (
       <>
-        <Chip
-          label={config[chainId]?.name || 'Unsupported'}
-          sx={{ marginLeft: 'auto' }}
-          onClick={() => setIsChainSelectorModalOpen(true)}
-        />
+        <Badge onClick={() => setIsChainSelectorModalOpen(true)}>
+          {config[chainId]?.name || "Unsupported"}
+        </Badge>
         <ChainSelectorModal
           onClose={() => setIsChainSelectorModalOpen(false)}
           isOpen={isChainSelectorModalOpen}
         />
       </>
-    )
+    );
   } else {
-    return <Chip label={'Preview (Goerli)'} sx={{ marginLeft: 'auto' }} />
+    return <Badge>Preview (Goerli)</Badge>;
   }
 }

@@ -1,20 +1,7 @@
-import Head from "next/head";
-import {
-  Box,
-  Flex,
-  Button,
-  Heading,
-  Text,
-  Link,
-  Image,
-  List,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Button, Link, Stack } from "@chakra-ui/react";
 import Layout from "../components/layout/Layout";
-import { Footer } from "../components/layout/Footer";
 import { MissionSection } from "../components/Section/MissionSection";
 import { TeamSection } from "../components/Section/TeamSection";
-import { ContributorSection } from "../components/Section/ContributorSection";
 import { CTASection } from "../components/Section/CTASection";
 
 import { TbArrowUpRight } from "react-icons/tb";
