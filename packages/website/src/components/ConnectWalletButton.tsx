@@ -15,7 +15,13 @@ export function ConnectWalletButton() {
       isLoading={chainId == null}
       type="submit"
       value="Submit"
-      sx={{ marginLeft: "10px" }}
+      sx={{
+        marginLeft: "10px",
+        _hover: {
+          background: 'white',
+          color: "black",
+        },
+      }}
       onClick={() => (isConnected && userAddress ? disconnect() : connect())}
     >
       {isConnected && userAddress

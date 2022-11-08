@@ -90,6 +90,7 @@ const MenuLinks = ({ isOpen }) => {
     >
       <Stack
         align="center"
+        spacing={4}
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
