@@ -1,26 +1,36 @@
-import { useAppSelector } from "../../redux/hooks";
-import { selectChainId, selectUserAddress } from "../../redux/appSlice";
+import { useAppSelector } from "../redux/hooks";
+import { selectChainId, selectUserAddress } from "../redux/appSlice";
 import { useEffect, useState } from "react";
 import { Alert, AlertIcon, Box, Button, ButtonGroup, Container, Heading, Link, Stack, Text } from "@chakra-ui/react";
 
 /**
  * TODO: load rewards via ajax
  */
-import rewards from "./rewards.json";
-import Layout from "../../components/layout/Layout";
-import { ConnectWalletButton } from "../../components/ConnectWalletButton";
+import Layout from "../components/layout/Layout";
+import { ConnectWalletButton } from "../components/ConnectWalletButton";
 
 const Rewards = () => {
   const userAddress = useAppSelector(selectUserAddress);
   const chainId = useAppSelector(selectChainId);
   const [rewardInfo, setRewardInfo] = useState<any>({});
+  const [rewards, setRewards] = useState<any[]>([]);
+  useEffect(() => {
+    const get = async () => {
+      const res = await fetch("/api/rewards", {
+        method: "GET",
+      });
+      const json = await res.json();
+      setRewards(json);
+    };
+    get();
+  }, []);
   useEffect(() => {
     (rewards as any[]).forEach((reward) => {
       if (reward.address === userAddress) {
         setRewardInfo(reward);
       }
     });
-  }, [userAddress]);
+  }, [rewards, userAddress]);
   return (
     <Layout>
       <Stack>
@@ -30,14 +40,17 @@ const Rewards = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            color: "white",
             height: "50vh",
           }}
         >
-          <Heading>$DIVA Token Claim</Heading>
-          <Text>$DIVA is the governance token for DIVA Protocol.</Text>
+          <Box paddingBottom="8">
+            <Heading paddingBottom="8">$DIVA Token Claim</Heading>
+            <Text>$DIVA is the governance token for DIVA Protocol.</Text>
+          </Box>
           {userAddress === undefined && (
             <>
-              <Text variant="body1">
+              <Text variant="body1" paddingBottom={18}>
                 Connect your wallet to determine your eligibility.
               </Text>
               <ConnectWalletButton />
@@ -83,8 +96,8 @@ const Rewards = () => {
                         justifyContent: "space-between",
                       }}
                     >
-                      <Text color="common.white">Total Testnet Points</Text>
-                      <Text color="common.white">{rewardInfo.points}</Text>
+                      <Text>Total Testnet Points</Text>
+                      <Text>{rewardInfo.points}</Text>
                     </Stack>
                     <Stack
                       direction={"row"}
@@ -127,7 +140,16 @@ const Rewards = () => {
           {userAddress !== undefined && rewardInfo.reward === undefined && (
             <Alert status="error">
               <AlertIcon />
-              You are not eligible. Reason: Not registered
+              <Text color="black">
+                <Text
+                  sx={{
+                    textDecoration: "underline",
+                  }}
+                >
+                  #{userAddress}
+                </Text>{" "}
+                You are not registered
+              </Text>
             </Alert>
           )}
         </Container>

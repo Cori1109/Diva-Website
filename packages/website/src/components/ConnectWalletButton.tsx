@@ -11,8 +11,7 @@ export function ConnectWalletButton() {
 
   return (
     <Button
-      variant="contained"
-      color="primary"
+      variant="outline"
       isLoading={chainId == null}
       type="submit"
       value="Submit"
