@@ -27,7 +27,7 @@ export const NavBar = (props) => {
     <NavBarContainer {...props}>
       <Link _hover={"none"} label="Home" href="/">
         <Box>
-          <Image src="./DIVALogo.png" alt="DivaLogo" />
+          <Image src="../DIVALogo.png" alt="DivaLogo" />
         </Box>
       </Link>
       <MenuToggle toggle={toggle} isOpen={isOpen} />

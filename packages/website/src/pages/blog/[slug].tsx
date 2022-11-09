@@ -1,24 +1,24 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Post } from '..';
-import { DivaLogo } from '../../components/DivaLogo';
-import { format, parseISO } from 'date-fns';
-import Tweet from 'react-tweet-embed'
-import { HOME, IMAGE_PATH } from '../../constants';
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { Post } from "..";
+import { format, parseISO } from "date-fns";
+import Tweet from "react-tweet-embed";
+import { HOME, IMAGE_PATH } from "../../constants";
 // @ts-ignore
-import { getAllPosts, getPostBySlug } from '../api/getPosts';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { GetStaticProps } from 'next';
-import { serialize } from 'next-mdx-remote/serialize';
-import { useEffect, useState } from 'react';
-import { RandomVerticalSvgLine } from '../../components/RandomVerticalSvgLine';
+import { getAllPosts, getPostBySlug } from "../api/getPosts";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { GetStaticProps } from "next";
+import { serialize } from "next-mdx-remote/serialize";
+import { useEffect, useState } from "react";
+import { RandomVerticalSvgLine } from "../../components/RandomVerticalSvgLine";
+import Layout from "../../components/layout/Layout";
 
 export async function getStaticPaths() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
   return {
-    paths: posts.map((v) => ({
-      params: { slug: v.slug },
+    paths: posts.map((post) => ({
+      params: { slug: post.slug },
     })),
     fallback: false,
   };
@@ -57,17 +57,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const PostPage = ({ source, post }: PostPageProps) => {
-
   return (
-    <>
+    <Layout>
       <Head>
         <title>Diva Protocol - {post.title}</title>
         <meta name="description" content={post.description} />
         <meta name="twitter:description" content={post.description} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image:src" content={`${HOME}${IMAGE_PATH}${post.coverImage}`} />
+        <meta
+          name="twitter:image:src"
+          content={`${HOME}${IMAGE_PATH}${post.coverImage}`}
+        />
         <meta name="twitter:image:alt" content={post.coverImageDescription} />
-        <meta property="og:image" content={`${HOME}${IMAGE_PATH}${post.coverImage}`} />
+        <meta
+          property="og:image"
+          content={`${HOME}${IMAGE_PATH}${post.coverImage}`}
+        />
         <meta property="og:description" content={post.description} />
         <meta property="og:title" content={post.title} />
         <link rel="icon" href="/logo.svg" />
@@ -76,13 +81,6 @@ const PostPage = ({ source, post }: PostPageProps) => {
           content="DIVA Protocol - Derivatives on the Ethereum blockchain"
         />
       </Head>
-      <nav className="p-5 pl-10 pt-8">
-        <Link href="/" passHref>
-          <a className="inline-block">
-            <DivaLogo className="fill-text stroke-text h-7" />
-          </a>
-        </Link>
-      </nav>
       <article className="pb-12 relative">
         <Image
           src={`${IMAGE_PATH}${post.coverImage}`}
@@ -100,8 +98,8 @@ const PostPage = ({ source, post }: PostPageProps) => {
           <MDXRemote {...source} components={components} />
         </div>
       </article>
-    </>
+    </Layout>
   );
 };
 
-export default PostPage
+export default PostPage;

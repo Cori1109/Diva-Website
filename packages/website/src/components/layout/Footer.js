@@ -21,7 +21,7 @@ import { logo } from "../../../public/images/DivaLogo";
 const Logo = (props) => {
   return (
     <Box>
-      <Image src="./diva_transparent 2.png" alt="DivaLogo" />
+      <Image src="../DIVALogo.png" alt="DivaLogo" />
     </Box>
   );
 };
