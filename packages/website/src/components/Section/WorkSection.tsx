@@ -77,7 +77,6 @@ export const WorkSection = () => {
           bg="linear-gradient(90deg, #00C2FF -21.11%, #0038FF 100%)"
           borderRadius="50px"
           fontWeight="bold"
-          _hover="none"
           borderColor="#ccd0d5"
           color="#ffffff"
           align="center"
