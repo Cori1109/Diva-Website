@@ -22,7 +22,6 @@ import Link from "next/link";
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();
-  console.log("posts:", posts);
 
   return {
     props: {

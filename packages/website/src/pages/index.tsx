@@ -9,7 +9,6 @@ import {
   Image,
   List,
 } from "@chakra-ui/react";
-import { NavBar } from "../components/layout/NavBar";
 import { HeroSection } from "../components/Section/HeroSection";
 import { ProductSection } from "../components/Section/ProductSection";
 import Layout from "../components/layout/Layout";

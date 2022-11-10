@@ -7,7 +7,7 @@ import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 import { Global, css } from "@emotion/react";
 
 import { Fonts } from "../Fonts/Fonts";
-import { theme } from './theme';
+import { theme } from '../theme';
 
 const GlobalStyle = () => {
   return (
