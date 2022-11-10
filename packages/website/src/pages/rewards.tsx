@@ -11,15 +11,15 @@ import { ConnectWalletButton } from "../components/ConnectWalletButton";
 
 const Rewards = () => {
   const userAddress = useAppSelector(selectUserAddress);
-  console.log('userAddress', userAddress)
   const [rewardInfo, setRewardInfo] = useState<any>({});
   const [rewards, setRewards] = useState<any[]>([]);
   useEffect(() => {
     const get = async () => {
       console.log('Fetch rewards ...')
-      const res = await fetch("/api/rewards", {
+      const res = await fetch(`https://${process.env.VERCEL_URL}/api/rewards`, {
         method: "GET",
       });
+      console.log('res', res)
       const json = await res.json();
       setRewards(json);
     };
