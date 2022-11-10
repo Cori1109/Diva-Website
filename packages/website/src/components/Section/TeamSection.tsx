@@ -57,7 +57,7 @@ export const TeamSection = () => {
             src="../DIVATeam/wlad.png"
             alt="Wlad"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Wlad
           </Text>
         </Box>
@@ -68,7 +68,7 @@ export const TeamSection = () => {
             src="../DIVATeam/sascha.png"
             alt="sascha"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Sascha
           </Text>
         </Box>
@@ -79,7 +79,7 @@ export const TeamSection = () => {
             src="../DIVATeam/julian.png"
             alt="julian"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Julian
           </Text>
         </Box>
@@ -90,7 +90,7 @@ export const TeamSection = () => {
             src="../DIVATeam/richard.png"
             alt="richard"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Richard
           </Text>
         </Box>
@@ -101,7 +101,7 @@ export const TeamSection = () => {
             src="../DIVATeam/tarun.png"
             alt="tarun"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Tarun
           </Text>
         </Box>
@@ -112,7 +112,7 @@ export const TeamSection = () => {
             src="../DIVATeam/harsh.png"
             alt="harsh"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Harsh
           </Text>
         </Box>
@@ -123,7 +123,7 @@ export const TeamSection = () => {
             src="../DIVATeam/sambit.png"
             alt="sambit"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Sambit
           </Text>
         </Box>
@@ -134,7 +134,7 @@ export const TeamSection = () => {
             src="../DIVATeam/kerry.png"
             alt="kerry"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Kerry
           </Text>
         </Box>
@@ -145,7 +145,7 @@ export const TeamSection = () => {
             src="../DIVATeam/ayaz.png"
             alt="ayaz"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Ayaz
           </Text>
         </Box>
@@ -156,7 +156,7 @@ export const TeamSection = () => {
             src="../DIVATeam/ashis.png"
             alt="ashis"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Ashis
           </Text>
         </Box>
@@ -167,7 +167,7 @@ export const TeamSection = () => {
             src="../DIVATeam/alex.png"
             alt="Aleksandar"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Aleksandar
           </Text>
         </Box>
@@ -178,7 +178,7 @@ export const TeamSection = () => {
             src="../DIVATeam/sahil.png"
             alt="sahil"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Sahil
           </Text>
         </Box>
@@ -189,7 +189,7 @@ export const TeamSection = () => {
             src="../DIVATeam/manvir.png"
             alt="manvir"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Manvir
           </Text>
         </Box>
@@ -200,7 +200,7 @@ export const TeamSection = () => {
             src="../DIVATeam/evan.png"
             alt="evan"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Evan
           </Text>
         </Box>
@@ -211,7 +211,7 @@ export const TeamSection = () => {
             src="../DIVATeam/precious.png"
             alt="precious"
           />
-          <Text color={"#A4A4A4"} pt="5">
+          <Text textAlign={"center"} color={"#A4A4A4"} pt="5">
             Precious
           </Text>
         </Box>

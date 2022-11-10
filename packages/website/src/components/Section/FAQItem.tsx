@@ -16,7 +16,8 @@ const FAQItem = ({ title, body }) => (
     px={5}
     py="2"
     my="10"
-    w="60%"
+    w={["auto", "auto", "50%", "60%", "60%"]}
+    mx="auto"
   >
     {({ isExpanded }) => (
       <>
