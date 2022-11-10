@@ -7,18 +7,18 @@ import {
   Button,
   Heading,
   Text,
-  Link,
   Image,
   List,
   Stack,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { format, parseISO } from "date-fns";
-import { getAllPosts, getAllSlugs } from "../../pages/api/getPosts";
+import { getAllPosts, getAllSlugs } from "../api/getPosts";
 import Layout from "../../components/layout/Layout";
-import { Footer } from "../../components/layout/Footer";
 import BlogCard from "../../components/Section/BlogCard";
-import BlogHeader from "../../components/Section/BlogHeader";
+import FeaturedBlogPost from "../../components/Section/FeaturedBlogPost";
+import { Post } from "..";
+import Link from "next/link";
+
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();
@@ -38,7 +38,8 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }: { posts: Post[] }) {
+  const featured = posts.find((v) => v.featured === true);
   return (
     <Layout>
       <Box
@@ -46,11 +47,12 @@ export default function Blog({ posts }) {
         justifyContent="center"
         w="100%"
       >
-        <BlogHeader />
+        {featured != null && <FeaturedBlogPost post={featured} />}
         <SimpleGrid columns={[1, 2, 2, 3, 4]} spacing="2rem">
           {posts?.map((post) => (
             <Link key={post.slug} href={`/posts/${post.slug}`} passHref>
               <BlogCard
+                coverImageAlt={post.coverImageDescription}
                 title={post.title}
                 coverImage={post.coverImage}
                 author={post.author}

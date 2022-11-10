@@ -77,7 +77,7 @@ export const SocialMediaSection = () => {
         justifyContent={"center"}
         direction={["column", "column", "column", "row", "row"]}
       >
-        <Link _hover={"none"} href="https://discord.gg/DE5b8ZeJjK" isExternal>
+        <Link href="https://discord.gg/DE5b8ZeJjK" isExternal>
           <SocialMediaMeta
             title="Discord"
             desc="Ask questions and engage with the DIVA Community"
@@ -85,7 +85,6 @@ export const SocialMediaSection = () => {
           />
         </Link>
         <Link
-          _hover={"none"}
           href="https://twitter.com/divaprotocol_io"
           isExternal
         >

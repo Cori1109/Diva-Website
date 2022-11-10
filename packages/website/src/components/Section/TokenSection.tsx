@@ -1,17 +1,11 @@
 import {
-  Flex,
-  Container,
   Heading,
   Stack,
-  VStack,
   Text,
   Button,
-  Icon,
   Image,
-  IconProps,
   Box,
   Link,
-  Center,
 } from "@chakra-ui/react";
 
 import { TbArrowUpRight } from "react-icons/tb";
@@ -66,7 +60,6 @@ export const TokenSection = () => {
 
           <Stack direction="row" spacing={6}>
             <Link
-              _hover={"none"}
               href="https://docs.divaprotocol.io/introduction/what-is-diva-token"
               isExternal
             >
@@ -76,7 +69,6 @@ export const TokenSection = () => {
                 rightIcon={<TbArrowUpRight />}
                 borderColor="{Linear Gradient rgba(0, 194, 255, 1) rgba(0, 56, 255, 1)}"
                 variant="outline"
-                _hover="none"
                 size="lg"
                 width="200px"
                 fontFamily={"body"}
@@ -86,7 +78,7 @@ export const TokenSection = () => {
                 LEARN MORE
               </Button>
             </Link>
-            <Link _hover={"none"} href="https://docs.divaprotocol.io/">
+            <Link href="https://docs.divaprotocol.io/">
               <Button
                 textAlign={"center"}
                 bg="linear-gradient(270deg, #00C2FF 0%, #0038FF 100%)"

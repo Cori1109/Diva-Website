@@ -20,7 +20,7 @@ const FAQItem = ({ title, body }) => (
   >
     {({ isExpanded }) => (
       <>
-        <AccordionButton _hover={"none"}>
+        <AccordionButton>
           <Box
             flex="1"
             textAlign="left"

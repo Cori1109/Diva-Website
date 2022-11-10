@@ -25,7 +25,7 @@ export const AppSection = () => {
         align="center"
         direction={["column", "column", "row", "row", "row"]}
       >
-        <Link _hover={"none"} isExternal href="https://app.diva.finance/">
+        <Link isExternal href="https://app.diva.finance/">
           <ProductCard
             imageSrc="/images/InsuranceImg.png"
             productName="DIVA App"

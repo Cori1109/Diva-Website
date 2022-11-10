@@ -1,17 +1,10 @@
 import {
   Heading,
-  Avatar,
   Box,
-  Center,
   Text,
-  Stack,
   HStack,
   VStack,
-  Button,
-  Link,
-  Badge,
   Image,
-  Flex,
   Icon,
 } from "@chakra-ui/react";
 import { TbArrowUpRight } from "react-icons/tb";

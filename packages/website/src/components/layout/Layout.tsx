@@ -3,7 +3,7 @@ import { Box, Flex, Stack } from "@chakra-ui/react";
 import { NavBar } from "./NavBar";
 import { Footer } from "./Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: React.PropsWithChildren<{}>) => {
   return (
     <Flex
       direction="column"

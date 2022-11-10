@@ -24,7 +24,6 @@ export default function About() {
             spacing={6}
           >
             <Link
-              _hover={"none"}
               isExternal
               href="https://docs.divaprotocol.io/"
             >
@@ -44,13 +43,12 @@ export default function About() {
                 DOCUMENTATION
               </Button>
             </Link>
-            <Link _hover={"none"} href="/dapps">
+            <Link href="/dapps">
               <Button
                 textAlign={"center"}
                 color="#00C2FF"
                 borderColor="{Linear Gradient rgba(0, 194, 255, 1) rgba(0, 56, 255, 1)}"
                 variant="outline"
-                _hover="none"
                 size="lg"
                 width="200px"
                 fontFamily={"body"}

@@ -50,7 +50,7 @@ export const TeamSection = () => {
         py={{ base: 20, md: 18 }}
         direction={["row", "row", "row", "row", "row"]}
       >
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -61,7 +61,7 @@ export const TeamSection = () => {
             Wlad
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -72,7 +72,7 @@ export const TeamSection = () => {
             Sascha
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -83,7 +83,7 @@ export const TeamSection = () => {
             Julian
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -94,7 +94,7 @@ export const TeamSection = () => {
             Richard
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -105,7 +105,7 @@ export const TeamSection = () => {
             Tarun
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -116,7 +116,7 @@ export const TeamSection = () => {
             Harsh
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -127,7 +127,7 @@ export const TeamSection = () => {
             Sambit
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -138,7 +138,7 @@ export const TeamSection = () => {
             Kerry
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -149,7 +149,7 @@ export const TeamSection = () => {
             Ayaz
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -160,7 +160,7 @@ export const TeamSection = () => {
             Ashis
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -171,7 +171,7 @@ export const TeamSection = () => {
             Aleksandar
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -182,7 +182,7 @@ export const TeamSection = () => {
             Sahil
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -193,7 +193,7 @@ export const TeamSection = () => {
             Manvir
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -204,7 +204,7 @@ export const TeamSection = () => {
             Evan
           </Text>
         </Box>
-        <Box justify="center" align="center">
+        <Box>
           <Image
             borderRadius="full"
             boxSize={["60px", "60px", "60px", "120px", "120px"]}

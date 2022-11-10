@@ -19,9 +19,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/about.js",
-    "src/components/layout/Footer.js",
-    "src/components/layout/NavBar.js",
+    "src/pages/about.tsx",
+    "src/components/layout/Footer.tsx",
+    "src/components/layout/NavBar.tsx",
     "src/pages/posts/index.js"
   ],
   "exclude": ["node_modules"]

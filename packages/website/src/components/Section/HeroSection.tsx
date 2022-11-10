@@ -27,7 +27,7 @@ export const HeroSection = () => {
     >
       <Image w={"100%"} position="relative" src="./bgimg1.png" alt="bgimg" />
       <Stack
-        position={["auto", "auto", "relative", "relative", "relative"]}
+        position={["static", "static", "relative", "relative", "relative"]}
         top={["auto", "auto", "-535px", "-635px", "-50vw"]}
         zIndex="1"
         textAlign={"center"}
@@ -67,11 +67,7 @@ export const HeroSection = () => {
             justify="center"
             spacing={6}
           >
-            <Link
-              _hover={"none"}
-              href="https://docs.divaprotocol.io/"
-              isExternal
-            >
+            <Link href="https://docs.divaprotocol.io/" isExternal>
               <Button
                 textAlign={"center"}
                 bg="linear-gradient(270deg, #00C2FF 0%, #0038FF 100%)"
@@ -88,14 +84,12 @@ export const HeroSection = () => {
                 DOCUMENTATION
               </Button>
             </Link>
-            <Link _hover={"none"} href="/dapps">
+            <Link href="/dapps">
               <Button
                 textAlign={"center"}
                 textColor="#00C2FF"
                 border={"1px"}
-                col
                 bg="linear(to-r, #ffffff, #a01450)"
-                _hover="none"
                 size="lg"
                 width="200px"
                 fontFamily={"body"}

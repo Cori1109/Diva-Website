@@ -52,7 +52,7 @@ export const ContributorSection = () => {
             py={{ base: 20, md: 18 }}
             direction={["row", "row", "row", "row", "row"]}
           >
-            <Box justify="center" align="center">
+            <Box>
               <Image
                 borderRadius="full"
                 boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -63,7 +63,7 @@ export const ContributorSection = () => {
                 Member Name
               </Text>
             </Box>
-            <Box justify="center" align="center">
+            <Box>
               <Image
                 borderRadius="full"
                 boxSize={["60px", "60px", "60px", "120px", "120px"]}
@@ -74,7 +74,7 @@ export const ContributorSection = () => {
                 Member Name
               </Text>
             </Box>
-            <Box justify="center" align="center">
+            <Box>
               <Image
                 borderRadius="full"
                 boxSize={["60px", "60px", "60px", "120px", "120px"]}

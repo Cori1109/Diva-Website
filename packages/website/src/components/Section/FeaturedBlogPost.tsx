@@ -1,34 +1,15 @@
 import {
-  Container,
   Stack,
   Flex,
   Box,
   Heading,
-  Text,
   Button,
   Image,
-  Icon,
-  IconButton,
-  createIcon,
-  IconProps,
-  useColorModeValue,
 } from "@chakra-ui/react";
+import { Post } from "../../pages";
 import BlogMeta from "./BlogMeta";
 
-const authors = [
-  {
-    name: "sahilkumar.eth",
-    avatarUrl:
-      "https://pbs.twimg.com/profile_images/1267127469783478272/AtqUtMCj_400x400.jpg",
-  },
-  {
-    name: "Walodja1987",
-    avatarUrl:
-      "https://pbs.twimg.com/profile_images/1362898050633654275/M7BEnFv6_400x400.jpg",
-  },
-];
-
-const BlogHeader = () => {
+const FeaturedBlogPost = ({ post }: { post: Post }) => {
   return (
     <Stack
       align={"center"}
@@ -55,13 +36,9 @@ const BlogHeader = () => {
           color="white"
         >
           {" "}
-          How DIVA Protocol can help unlock affordable insurance for farmers
+          {post.title}
         </Heading>
-        <BlogMeta
-          coverImageAlt="DIVA quiz"
-          authors={authors}
-          publishedAt=" July 29, 2022"
-        />
+        <BlogMeta author={post.author} publishedAt={post.date} />
       </Stack>
       <Flex
         flex={1}
@@ -75,11 +52,11 @@ const BlogHeader = () => {
           align={"center"}
           w={"100%"}
           h={"100%"}
-          src={"/images/Blog.png"}
+          src={`/images/posts/${post.coverImage}`}
         />
       </Flex>
     </Stack>
   );
 };
 
-export default BlogHeader;
+export default FeaturedBlogPost;

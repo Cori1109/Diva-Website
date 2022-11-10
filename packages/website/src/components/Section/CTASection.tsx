@@ -1,16 +1,9 @@
 import {
   Heading,
   Stack,
-  HStack,
   Text,
-  Icon,
-  Image,
   Box,
   VStack,
-  Avatar,
-  Wrap,
-  Link,
-  Button,
 } from "@chakra-ui/react";
 
 export const CTASection = ({ title, desc, children }) => {

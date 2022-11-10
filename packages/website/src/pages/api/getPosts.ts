@@ -20,7 +20,7 @@ export function getPostBySlug(slug: string) {
     content: data.content,
     ...data.data,
     slug,
-  } as Post;
+  } as Post & { date: Date };
 }
 
 export function getAllPosts() {

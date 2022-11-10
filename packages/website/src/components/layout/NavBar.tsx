@@ -10,13 +10,11 @@ import {
   Menu,
   MenuButton,
   MenuList,
-  color,
-  Icon,
 } from "@chakra-ui/react";
 
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-import { FaGithub, FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaTwitter, FaDiscord } from "react-icons/fa";
 
 export const NavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -25,7 +23,7 @@ export const NavBar = (props) => {
 
   return (
     <NavBarContainer {...props}>
-      <Link _hover={"none"} label="Home" href="/">
+      <Link href="/">
         <Box>
           <Image src="../DIVALogo.png" alt="DivaLogo" />
         </Box>
@@ -58,7 +56,13 @@ const MenuIcon = () => (
   </svg>
 );
 
-const MenuToggle = ({ toggle, isOpen }) => {
+const MenuToggle = ({
+  toggle,
+  isOpen,
+}: {
+  toggle: () => void;
+  isOpen: boolean;
+}) => {
   return (
     <Box display={{ base: "block", md: "none" }} onClick={toggle}>
       {isOpen ? <CloseIcon /> : <MenuIcon />}
@@ -66,7 +70,10 @@ const MenuToggle = ({ toggle, isOpen }) => {
   );
 };
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+const MenuItem = ({
+  children,
+  to = "/",
+}: React.PropsWithChildren<{ to: string }>) => {
   return (
     <Link
       _hover={{
@@ -75,9 +82,7 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
       }}
       href={to}
     >
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
+      <Text display="block">{children}</Text>
     </Link>
   );
 };
@@ -131,7 +136,6 @@ const MenuLinks = ({ isOpen }) => {
                 border={"none"}
                 alignContent={"center"}
                 bg="#1e1d1d"
-                _hover={"none"}
               >
                 <MenuItem to="https://discord.gg/DE5b8ZeJjK">
                   <Button

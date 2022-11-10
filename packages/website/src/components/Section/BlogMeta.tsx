@@ -9,10 +9,17 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 
-const BlogMeta = ({ author, publishedAt }) => {
+
+const BlogMeta = ({
+  author,
+  publishedAt,
+}: {
+  author: string;
+  publishedAt: string;
+}) => {
   return (
     <VStack align="flex-start" pb={6}>
-      <Stack direction="row" max={1}>
+      <Stack direction="row">
         <AvatarGroup size="sm" max={3}>
           <Avatar
             name={author}

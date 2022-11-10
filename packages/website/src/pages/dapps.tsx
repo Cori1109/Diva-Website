@@ -1,20 +1,11 @@
-import Head from "next/head";
 import {
   Box,
-  Flex,
   Button,
-  Heading,
-  Text,
   Link,
-  Image,
-  List,
-  Stack,
 } from "@chakra-ui/react";
 import Layout from "../components/layout/Layout";
-import { Footer } from "../components/layout/Footer";
 import { CTASection } from "../components/Section/CTASection";
 import { StoreSection } from "../components/Section/StoreSection";
-import { ProductCard } from "../components/ProductCard";
 import { AppSection } from "../components/Section/AppsSection";
 import { TbArrowUpRight } from "react-icons/tb";
 
@@ -31,7 +22,6 @@ export default function dApps() {
         >
           <>
             <Link
-              _hover={"none"}
               isExternal
               href="https://docs.divaprotocol.io/for-developers/overview"
             >
@@ -41,7 +31,6 @@ export default function dApps() {
                 rightIcon={<TbArrowUpRight />}
                 borderColor="{Linear Gradient rgba(0, 194, 255, 1) rgba(0, 56, 255, 1)}"
                 variant="outline"
-                _hover="none"
                 size="lg"
                 width="200px"
                 fontFamily={"body"}

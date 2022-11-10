@@ -30,7 +30,6 @@ export const ProductSection = () => {
           fontWeight={700}
           fontSize={["30px", "30px", "60px", "60px", "60px"]}
           color={"white"}
-          spacing={{ base: 8, md: 10 }}
         >
           DIVA Protocol Powered Products{" "}
         </Heading>
@@ -54,7 +53,6 @@ export const ProductSection = () => {
           direction={["column", "column", "column", "column", "row"]}
         >
           <Link
-            _hover={"none"}
             href=" https://docs.divaprotocol.io/use-cases/overview"
             isExternal
           >
@@ -66,7 +64,6 @@ export const ProductSection = () => {
             />
           </Link>
           <Link
-            _hover={"none"}
             href=" https://docs.divaprotocol.io/use-cases/overview"
             isExternal
           >
@@ -77,7 +74,6 @@ export const ProductSection = () => {
             />
           </Link>
           <Link
-            _hover={"none"}
             href=" https://docs.divaprotocol.io/use-cases/overview"
             isExternal
           >
@@ -89,9 +85,8 @@ export const ProductSection = () => {
           </Link>
         </Stack>
       </Flex>
-      <Box align="center">
+      <Box>
         <Link
-          _hover={"none"}
           href=" https://docs.divaprotocol.io/use-cases/overview"
           isExternal
         >
@@ -101,7 +96,6 @@ export const ProductSection = () => {
             rightIcon={<TbArrowUpRight />}
             borderColor="{Linear Gradient rgba(0, 194, 255, 1) rgba(0, 56, 255, 1)}"
             variant="outline"
-            _hover="none"
             size="lg"
             width="200px"
             fontFamily={"body"}

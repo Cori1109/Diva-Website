@@ -20,6 +20,21 @@ import FAQSection from "../components/Section/FAQSection";
 import { WorkSection } from "../components/Section/WorkSection";
 import { SocialMediaSection } from "../components/Section/SocialMediaSection";
 
+export type Post = {
+  author: string;
+  content: string;
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+  coverImage: string;
+  coverImageDescription: string;
+  coverImageWidth: number;
+  coverImageHeight: number;
+  excerpt: string;
+  featured?: boolean;
+};
+
 export default function Home() {
   return (
     <Layout>

@@ -29,7 +29,7 @@ const Logo = (props) => {
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg={("blackAlpha.100", "whiteAlpha.100")}
+      bg={"whiteAlpha.100"}
       rounded={"full"}
       w={8}
       h={8}
@@ -40,7 +40,7 @@ const SocialButton = ({ children, label, href }) => {
       alignItems={"center"}
       justifyContent={"center"}
       _hover={{
-        bg: ("blackAlpha.200", "whiteAlpha.200"),
+        bg: "whiteAlpha.200",
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -65,27 +65,26 @@ export const Footer = () => {
           <SimpleGrid columns={[1, 4, 4, 4, 4]} spacing="8">
             <Stack>
               <Box>
-                <Logo color={("gray.700", "white")} />
+                <Logo color={"white"} />
               </Box>
             </Stack>
             <Stack
               mx={["none", "none", "none", "auto", "auto"]}
               align={"flex-start"}
             >
-              <Link _hover="none" href={"/about"}>
+              <Link href={"/about"}>
                 About Us
               </Link>
               <Link
-                _hover="none"
                 isExternal
                 href={"https://docs.divaprotocol.io/"}
               >
                 Docs
               </Link>
-              <Link _hover="none" href={"/token"}>
+              <Link href={"/token"}>
                 Token
               </Link>
-              <Link _hover="none" href={"/posts"}>
+              <Link href={"/posts"}>
                 Blog
               </Link>
             </Stack>
@@ -95,14 +94,12 @@ export const Footer = () => {
             >
               {/*<Link href={"#"}>Whitepaper</Link>*/}
               <Link
-                _hover="none"
                 isExternal
                 href={"https://docs.divaprotocol.io/"}
               >
                 DIVA Slide Deck
               </Link>
               <Link
-                _hover="none"
                 isExternal
                 href={
                   "https://docs.divaprotocol.io/for-developers/technical-resources"

@@ -4,7 +4,7 @@ import FAQItem from "./FAQItem";
 import { faqData } from "./faqData";
 
 const FAQContent = () => (
-  <Accordion allowToggle defaultIndex={[0]} justify="center" align="center">
+  <Accordion allowToggle defaultIndex={[0]}>
     {faqData.map((faq, index) => (
       <FAQItem title={faq.title} body={faq.body} key={index} />
     ))}

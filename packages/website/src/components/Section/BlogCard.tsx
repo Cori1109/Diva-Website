@@ -15,9 +15,13 @@ const BlogCard = ({
   coverImage,
   coverImageAlt,
   author,
-  avatar,
   publishedAt,
-  href,
+}: {
+  title: string;
+  coverImage: string;
+  coverImageAlt: string;
+  author: string;
+  publishedAt: string;
 }) => {
   return (
     <VStack spacing="6" cursor="pointer" align="flex-start" borderRadius={8}>
@@ -35,7 +39,7 @@ const BlogCard = ({
         >
           {title}
         </Heading>
-        <BlogMeta author={author} avatar={avatar} publishedAt={publishedAt} />
+        <BlogMeta author={author} publishedAt={publishedAt} />
       </Wrap>
     </VStack>
   );
