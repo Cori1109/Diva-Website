@@ -10,7 +10,7 @@ import Layout from "../components/layout/Layout";
 import { ConnectWalletButton } from "../components/ConnectWalletButton";
 
 const Rewards = () => {
-  const userAddress = useAppSelector(selectUserAddress);
+  const userAddress = "0xa5b0d84a6f5300b1f74ad40b1153a020974cc766" // useAppSelector(selectUserAddress);
   const [rewardInfo, setRewardInfo] = useState<any>({});
   const [rewards, setRewards] = useState<any[]>([]);
   useEffect(() => {
@@ -25,7 +25,7 @@ const Rewards = () => {
   }, []);
   useEffect(() => {
     (rewards as any[]).forEach((reward) => {
-      if (reward.address === userAddress) {
+      if (reward.address.toLowerCase() === userAddress.toLowerCase()) {
         setRewardInfo(reward);
       }
     });
@@ -153,7 +153,7 @@ const Rewards = () => {
         {userAddress !== undefined && rewardInfo.reward === undefined && (
           <Alert status="error" width={"auto"} padding={22} fontSize={"large"}>
             <AlertIcon />
-            <Text color="black">You are not registered</Text>
+            <Text color="black">You were not registered</Text>
           </Alert>
         )}
 
