@@ -140,7 +140,7 @@ const Rewards = () => {
           rewardInfo.reward !== undefined &&
           rewardInfo.reward !== "" && (
             <Alert
-              status="success"
+              status="info"
               color="black"
               width={"auto"}
               padding={22}
