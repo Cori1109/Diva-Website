@@ -78,7 +78,7 @@ export const TokenSection = () => {
                 LEARN MORE
               </Button>
             </Link>
-            <Link href="https://docs.divaprotocol.io/">
+            <Link href="https://divaprotocol.io/rewards">
               <Button
                 textAlign={"center"}
                 bg="linear-gradient(270deg, #00C2FF 0%, #0038FF 100%)"
