@@ -10,11 +10,13 @@ import Layout from "../components/layout/Layout";
 import { ConnectWalletButton } from "../components/ConnectWalletButton";
 
 const Rewards = () => {
-  const userAddress = "0xa5b0d84a6f5300b1f74ad40b1153a020974cc766" // useAppSelector(selectUserAddress);
+  const userAddress = useAppSelector(selectUserAddress);
+  console.log('userAddress', userAddress)
   const [rewardInfo, setRewardInfo] = useState<any>({});
   const [rewards, setRewards] = useState<any[]>([]);
   useEffect(() => {
     const get = async () => {
+      console.log('Fetch rewards ...')
       const res = await fetch("/api/rewards", {
         method: "GET",
       });
@@ -26,6 +28,9 @@ const Rewards = () => {
   useEffect(() => {
     (rewards as any[]).forEach((reward) => {
       if (reward.address.toLowerCase() === userAddress.toLowerCase()) {
+        console.log('reward.address.toLowerCase()', reward.address.toLowerCase())
+        console.log('userAddress.toLowerCase()', userAddress.toLowerCase())
+        console.log('reward', reward)
         setRewardInfo(reward);
       }
     });
