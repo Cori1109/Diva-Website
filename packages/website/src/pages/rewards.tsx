@@ -38,14 +38,17 @@ const Rewards = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          alignContent: "center",
           color: "white",
           height: "50vh",
+          textAlign: "center",
         }}
         spacing={8}
       >
         <Box textAlign={"center"}>
           <Heading paddingBottom="8">$DIVA Token Claim</Heading>
           <Text>$DIVA is the governance token for DIVA Protocol.</Text>
+        </Box>
         {userAddress === undefined && (
           <>
             <Text variant="body1" paddingBottom={18}>
@@ -54,7 +57,13 @@ const Rewards = () => {
           </>
         )}
         {userAddress !== undefined && rewardInfo == null && (
-          <Alert status="error" color="black">
+          <Alert
+            status="error"
+            color="black"
+            width={"auto"}
+            padding={22}
+            fontSize={"large"}
+          >
             <AlertIcon />
             Connected account was not registered for the testnet
           </Alert>
@@ -62,14 +71,27 @@ const Rewards = () => {
         {userAddress !== undefined &&
           rewardInfo.reward !== undefined &&
           rewardInfo.reward !== "" && (
-            <Text>
+            <Alert
+              status="success"
+              color="black"
+              width={"auto"}
+              padding={22}
+              fontSize={"large"}
+            >
+              <AlertIcon />
               You are eligible for token claim, below are the details of your
               participation.
-            </Text>
+            </Alert>
           )}
 
         {userAddress !== undefined && rewardInfo.reward === "" && (
-          <Alert status="error" color="black">
+          <Alert
+            status="error"
+            color="black"
+            width={"auto"}
+            padding={22}
+            fontSize={"large"}
+          >
             <AlertIcon />
             {"You are not eligible. Reason: " + rewardInfo.comment}
           </Alert>
@@ -114,21 +136,26 @@ const Rewards = () => {
               </Container>
             </Box>
           )}
-          {userAddress !== undefined &&
-            rewardInfo.reward !== undefined &&
-            rewardInfo.reward !== "" && (
-              <Alert status="info" color="black">
-                <AlertIcon />
-                You will be able to claim your rewards once the token launches
-              </Alert>
-            )}
-          {userAddress !== undefined && rewardInfo.reward === undefined && (
-            <Alert status="error">
+        {userAddress !== undefined &&
+          rewardInfo.reward !== undefined &&
+          rewardInfo.reward !== "" && (
+            <Alert
+              status="success"
+              color="black"
+              width={"auto"}
+              padding={22}
+              fontSize={"large"}
+            >
               <AlertIcon />
-              <Text color="black">You are not registered</Text>
+              You will be able to claim your rewards once the token launches
             </Alert>
           )}
-        </Box>
+        {userAddress !== undefined && rewardInfo.reward === undefined && (
+          <Alert status="error" width={"auto"} padding={22} fontSize={"large"}>
+            <AlertIcon />
+            <Text color="black">You are not registered</Text>
+          </Alert>
+        )}
 
         <Box paddingBottom={20}>
           <ConnectWalletButton />

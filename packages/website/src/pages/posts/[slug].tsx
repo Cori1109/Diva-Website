@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { Post } from "..";
 import { format, parseISO } from "date-fns";
 import Tweet from "react-tweet-embed";

@@ -18,7 +18,7 @@ import BlogCard from "../../components/Section/BlogCard";
 import FeaturedBlogPost from "../../components/Section/FeaturedBlogPost";
 import { Post } from "..";
 import Link from "next/link";
-
+import { format, parseISO } from "date-fns";
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();
@@ -26,13 +26,13 @@ export const getStaticProps = async () => {
   return {
     props: {
       posts: posts
+        .sort((a, b) => {
+          return b.date.getTime() - a.date.getTime();
+        })
         .map((post) => ({
           ...post,
-          date: post.date.toISOString(),
-        }))
-        .sort((a, b) => {
-          return new Date(b.date).getTime() - new Date(a.date).getTime();
-        }),
+          date: format(post.date, "MMMM dd, yyyy"),
+        })),
     },
   };
 };
