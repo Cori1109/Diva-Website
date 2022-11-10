@@ -1,5 +1,5 @@
 import { useAppSelector } from "../redux/hooks";
-import { selectChainId, selectUserAddress } from "../redux/appSlice";
+import { selectUserAddress } from "../redux/appSlice";
 import { useEffect, useState } from "react";
 import { Alert, AlertIcon, Box, Button, ButtonGroup, Container, Heading, Link, Stack, Text } from "@chakra-ui/react";
 
@@ -46,7 +46,6 @@ const Rewards = () => {
         <Box textAlign={"center"}>
           <Heading paddingBottom="8">$DIVA Token Claim</Heading>
           <Text>$DIVA is the governance token for DIVA Protocol.</Text>
-        </Box>
         {userAddress === undefined && (
           <>
             <Text variant="body1" paddingBottom={18}>
@@ -115,22 +114,21 @@ const Rewards = () => {
               </Container>
             </Box>
           )}
-        {userAddress !== undefined &&
-          rewardInfo.reward !== undefined &&
-          rewardInfo.reward !== "" && (
-            <Stack direction={"row"}>
+          {userAddress !== undefined &&
+            rewardInfo.reward !== undefined &&
+            rewardInfo.reward !== "" && (
               <Alert status="info" color="black">
                 <AlertIcon />
                 You will be able to claim your rewards once the token launches
               </Alert>
-            </Stack>
+            )}
+          {userAddress !== undefined && rewardInfo.reward === undefined && (
+            <Alert status="error">
+              <AlertIcon />
+              <Text color="black">You are not registered</Text>
+            </Alert>
           )}
-        {userAddress !== undefined && rewardInfo.reward === undefined && (
-          <Alert status="error">
-            <AlertIcon />
-            <Text color="black">You are not registered</Text>
-          </Alert>
-        )}
+        </Box>
 
         <Box paddingBottom={20}>
           <ConnectWalletButton />

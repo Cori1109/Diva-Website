@@ -50,13 +50,15 @@ export default function Blog({ posts }: { posts: Post[] }) {
         <SimpleGrid columns={[1, 2, 2, 3, 4]} spacing="2rem">
           {posts?.map((post) => (
             <Link key={post.slug} href={`/posts/${post.slug}`} passHref>
-              <BlogCard
-                coverImageAlt={post.coverImageDescription}
-                title={post.title}
-                coverImage={post.coverImage}
-                author={post.author}
-                publishedAt={post.date}
-              />
+              <a>
+                <BlogCard
+                  coverImageAlt={post.coverImageDescription}
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  author={post.author}
+                  publishedAt={post.date}
+                />
+              </a>
             </Link>
           ))}
         </SimpleGrid>
