@@ -18,7 +18,9 @@ export default function dApps() {
 
         <CTASection
           title="BUIDL"
-          desc="DIVA Protocol is a smart contract that takes care of all the logic used to create and settle derivative assets. As a Web2 developer, you do not need to have any knowledge of writing smart contracts in Solidity. You can fully focus on building the best user experiences for creating and settling insurance, prediction or structured products."
+          desc="DIVA Protocol is a smart contract based operating system that was developed to empower web2 developers to build unique derivative applications 
+          such as insurance, prediction markets, structured product as well as conditional donations without the need to connect to any traditional banking infrastructure. 
+          We built the smart contracts, you build the best user experiences. Need some inspiration? Check out our docs."
         >
           <>
             <Link

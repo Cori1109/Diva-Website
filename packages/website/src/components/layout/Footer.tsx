@@ -105,7 +105,7 @@ export const Footer = () => {
                   "https://docs.divaprotocol.io/for-developers/technical-resources"
                 }
               >
-                Pecksheild Audit
+                Peckshield Audit
               </Link>
             </Stack>
             <Stack
@@ -138,7 +138,7 @@ export const Footer = () => {
           direction={["column", "column", "row", "row", "row"]}
         >
           {/*<Link href={"#"}>Privacy Policy</Link>*/}
-          <Link href={"#"}>©DIVA Protocol</Link>
+          {/*<Link href={"#"}>© DIVA Protocol</Link>*/}
           {/*<Link href={"#"}>Terms & Conditions</Link>*/}
         </Stack>
       </Flex>
