@@ -22,7 +22,7 @@
     "src/pages/about.js",
     "src/components/layout/Footer.js",
     "src/components/layout/NavBar.js",
-    "src/pages/blog/index.js"
+    "src/pages/posts/index.js"
   ],
   "exclude": ["node_modules"]
 }

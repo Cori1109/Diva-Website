@@ -101,7 +101,7 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem to="/rewards">Rewards </MenuItem>
         <MenuItem to="https://docs.divaprotocol.io/">Docs </MenuItem>
         <MenuItem to="/token">Token </MenuItem>
-        <MenuItem to="/blog">Blog </MenuItem>
+        <MenuItem to="/posts">Blog </MenuItem>
 
         <Menu>
           {({ isOpen }) => (

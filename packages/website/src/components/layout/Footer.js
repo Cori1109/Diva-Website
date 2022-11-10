@@ -85,7 +85,7 @@ export const Footer = () => {
               <Link _hover="none" href={"/token"}>
                 Token
               </Link>
-              <Link _hover="none" href={"/blog"}>
+              <Link _hover="none" href={"/posts"}>
                 Blog
               </Link>
             </Stack>
