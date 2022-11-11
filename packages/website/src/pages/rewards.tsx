@@ -25,7 +25,7 @@ const Rewards = () => {
   }, [userAddress]);
   useEffect(() => {
     (rewards as any[]).forEach((reward) => {
-      if (reward.address.toLowerCase() === userAddress.toLowerCase()) {
+      if (userAddress && reward.address.toLowerCase() === userAddress.toLowerCase()) {
         setRewardInfo(reward);
       }
     });
