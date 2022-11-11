@@ -1,24 +1,15 @@
-import Head from "next/head";
 
 import {
   Box,
-  Flex,
-  Wrap,
-  Button,
-  Heading,
-  Text,
-  Image,
-  List,
-  Stack,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { getAllPosts, getAllSlugs } from "../api/getPosts";
+import { getAllPosts } from "../api/getPosts";
 import Layout from "../../components/layout/Layout";
 import BlogCard from "../../components/Section/BlogCard";
 import FeaturedBlogPost from "../../components/Section/FeaturedBlogPost";
 import { Post } from "..";
 import Link from "next/link";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();
