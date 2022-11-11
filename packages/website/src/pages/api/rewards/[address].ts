@@ -16,5 +16,9 @@ export default async function handler(
   //Return the content of the data file in json format
   res
     .status(200)
-    .json(JSON.parse(fileContents).filter((v) => v.address === address));
+    .json(
+      JSON.parse(fileContents).filter(
+        (v) => v.address.toLowerCase() === (address as string).toLowerCase()
+      )
+    );
 }
