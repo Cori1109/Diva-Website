@@ -37,10 +37,6 @@ export type Post = {
 export default function Home() {
   return (
     <Layout>
-      <Head>
-        <title>DIVA Protocol</title>
-        <link rel="icon" href="/logo.svg" />
-      </Head>
       <HeroSection />
       <Box px={["20px", "30px", "50px", "65px", "80px"]} w="100%">
         <ProductSection />
