@@ -40,9 +40,9 @@ const Rewards = () => {
           alignItems: "center",
           alignContent: "center",
           color: "white",
-          height: "50vh",
           textAlign: "center",
         }}
+				height={["80vh", "80vh", "50vh", "50vh"]}
         spacing={8}
       >
         <Box textAlign={"center"}>
