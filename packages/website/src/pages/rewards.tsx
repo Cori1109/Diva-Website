@@ -15,22 +15,17 @@ const Rewards = () => {
   const [rewards, setRewards] = useState<any[]>([]);
   useEffect(() => {
     const get = async () => {
-      console.log('Fetch rewards ...')
-      const res = await fetch(`https://${process.env.VERCEL_URL}/api/rewards`, {
+      const res = await fetch(`/api/rewards/${userAddress}`, {
         method: "GET",
       });
-      console.log('res', res)
       const json = await res.json();
       setRewards(json);
     };
     get();
-  }, []);
+  }, [userAddress]);
   useEffect(() => {
     (rewards as any[]).forEach((reward) => {
       if (reward.address.toLowerCase() === userAddress.toLowerCase()) {
-        console.log('reward.address.toLowerCase()', reward.address.toLowerCase())
-        console.log('userAddress.toLowerCase()', userAddress.toLowerCase())
-        console.log('reward', reward)
         setRewardInfo(reward);
       }
     });
