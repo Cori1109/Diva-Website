@@ -40,7 +40,7 @@ export const ProductSection = () => {
           fontSize={["sm", "sm", "xl", "xl", "xl"]}
           lineHeight={["none", "none", "6", "6", "6"]}
         >
-          Products that you can be built on top of DIVA Protocol. <br />
+          Products that you can build on top of DIVA Protocol. <br />
           No smart contract programming skills required.
         </Text>
       </VStack>
