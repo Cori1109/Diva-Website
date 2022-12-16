@@ -1,0 +1,142 @@
+---
+title: Event-driven conditional donations - A pilot program by DIVA Technologies AG, Fortune Connect and Shamba Network
+description: Event-driven conditional donations - A pilot program by DIVA Technologies AG, Fortune Connect and Shamba Network
+date: 2022-12-13T13:37:00.284Z
+coverImage: diva_donate_header.png
+coverImageDescription: Farming
+coverImageWidth: 3000
+coverImageHeight: 1200
+featured: true
+author: Walodja1987
+---
+
+Back in [July](https://www.divaprotocol.io/posts/diva-how-diva-protocol-can-help-unlock-affordable-insurance-for-farmers), we shared an idea of how DIVA Protocol can be used to 
+create event-driven conditional donation products that financially assist farmers in adverse moments such as crop or livestock loss caused by natural disasters such as drought and floods. 
+
+Today, we are thrilled to announce that we partnered up with Fortune Connect, a financial inclusion hub for farmers in Kenya, 
+and Shamba Network, a web3 project providing ecological data to smart contracts, to launch a conditional donation pilot campaign powered by DIVA Protocol. 
+
+Before we dive into the campaign details, let’s briefly revisit what conditional donations are, how they compare to direct donations and how smart 
+contract technology, and DIVA Protocol in particular, can help to implement them in a transparent and cost effective way.
+
+## What are conditional donations?
+
+Conditional donations differ from direct donations in that they come with certain conditions attached. These conditions specify under which 
+circumstances funds will be released to the recipient. For example, a donation may be conditioned on the rain amount over a certain period of 
+time in a given area. If it falls below a predefined level that is associated with drought, the donation will be triggered to financially 
+support the people affected. If it stays above that level, no donation will be triggered.
+
+## What are the benefits compared to direct donations?
+
+Conditional donations can provide a number of benefits compared to direct donations:
+* **Greater control:** Because the terms of the donation are specified upfront, donors can ensure that their funds are used in a way that 
+aligns with their values and priorities. This can be particularly useful for donors who want to support specific causes or who have specific 
+goals in mind for their donation.
+* **Based on need:** Conditional donations are only released if recipient’s are in actual need. This can help to ensure that the funds are 
+used in the most effective way possible and can help to maximize the positive impact of the donation.
+* **Greater impact:** Unused funds can be redeployed into new conditional donation campaigns, thereby maximizing the impact and reach of the donation. 
+* **Verifiable:** The underlying trigger events are publicly verifiable and the release of the donation is detached from any potential external bias.
+
+## What are the benefits of using smart contract technology to implement conditional donations?
+
+Blockchain-based smart contract technology can provide a number of benefits for implementing conditional donations: 
+* **Transparency:** Donation flows are transparent and auditable on the blockchain.
+* **Trustless:** Funds are being held in a programmatic escrow rather than by a central party eliminating the risk of misuse and fraud.
+* **Efficient:** Programmatically enforced rules remove the need for manual processes which allows a quicker release of funds.
+* **Frictionless:** Money can come from across the globe to assist farmers.
+
+## Why DIVA Protocol?
+
+DIVA Protocol is a smart contract that acts as an operating system for derivative applications. More precisely, it allows its users to create 
+and settle derivative products in a permissionless and trustless way. As conditional donations derive their payout based on the outcome of an 
+underlying event, they are considered derivative products and can be implemented using DIVA Protocol.
+
+## How it works?
+
+The process of a conditional donation is illustrated below:
+
+<p align="center">
+  <img src="/images/posts/diva-donate-how-it-works.png" />
+</p>
+
+
+The DIVA smart contract manages the full conditional donation cycle in a trustless and predictable manner. In particular, it allows donors to 
+deposit funds (e.g., in the form of stablecoins such as USDT or other digital assets) and issue tokenized contingent claims to beneficiaries (1), 
+data providers to report event outcomes (2) and beneficiaries to claim their share in the donation after the outcome has been reported and the 
+payout has been determined by the DIVA smart contract (3). Any unused funds can be claimed by the donor and redeployed into a new conditional donation campaign (4).
+
+## About the campaign
+
+The goal of the pilot campaign is to provide farmers that are located in the Horn of Africa region financial support in case of a drought. 
+
+The region, which is stretching from southern Ethiopia to northern Kenya and Somalia, is experiencing regular droughts caused by climate change 
+and extreme weather events which results in curtailed agricultural production, destroyed crops and extreme livestock losses. Massive livestock deaths 
+disrupt the flow of income and food sources for the local farmers (so-called “pastoralists”) and their families.
+
+The goal of the campaign is to raise $15’000 to provide 100 pastoralists ($150 each) with financial support in case of a drought. The support 
+is equivalent to the value of one livestock per pastoralist.
+
+## What is the trigger metric?
+
+The average [NDVI](https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index), or Normalized Difference Vegetation Index, observed in the period 
+1 Feb - 30 April 2023 (dates subject to change) will serve as the trigger metric. 
+The NDVI measures the density and health of vegetation in a given region and is often used as an indicator for drought. It is calculated by taking the difference 
+between the near-infrared and red light reflectance of an area, and then dividing by the sum of the two. Higher NDVI values indicate a greater density of healthy 
+vegetation, while lower values indicate that the plants in an area are experiencing drought stress.
+
+The NDVI data can be collected by satellite imagery, aerial photography, and ground-based sensors. For the pilot program, Shamba Network, a web3 project focused 
+on the provision of ecological data to smart contracts, will sponsor the outcome reporting. Shamba Network taps into remote sensing data from satellites operated by 
+NASA, ESA and other space agencies to provide an updated picture of environmental conditions across the globe. 
+
+## What are the donation scenarios?
+The donation release profile is described by the chart below. Note that the chosen NDVI values are for presentation purposes only and may change for the actual product.
+
+<p align="center">
+  <img src="/images/posts/diva-donate-payoff-profile.png" />
+</p>
+
+The given payoff profile results in the following donation scenarios:
+- **$15’000** - if NDVI is smaller than or equal to 0.50
+- **$12’000** - if NDVI is 0.55
+- **$7’500** - if NDVI is 0.625
+- **$0** - if NDVI is larger than or equal to 0.75
+
+The donations can be claimed from the DIVA smart contract after the NDVI has been reported. Any unused funds can be re-claimed by the donor and re-deployed into new campaigns.
+
+## DIVA Donate
+The campaign will be released on DIVA Donate, a platform that is being developed by DIVA Technologies AG, to offer donors and donation recipients a seamless experience. 
+Some sneak peeks of the website are provided below.
+
+<p align="center">
+  <img src="/images/posts/diva-donate-1.png" />
+</p>
+
+<p align="center">
+  <img src="/images/posts/diva-donate-2.png" />
+</p>
+
+## Get in touch
+If you want to donate, are interested in launching your own conditional donation campaign or discuss other derivative use cases (e.g. using CO2 emissions or air 
+quality as underlying metrics), please get in touch.
+
+## About DIVA Technologies AG
+
+DIVA Technologies AG is a Swiss based software consulting firm that consults traditional businesses as well as DAOs in Web3 development. The company was founded 
+in 2022 by Wladimir Weinbender, Co-Founder of DIVA Protocol, a smart contract that acts as an operating system for a wide range of derivative applications 
+including insurance, predictions, structured products, credit default swaps, etc.
+
+## About Fortune Connect
+
+Fortune Connect is a digital financial inclusion hub enabling farmers to access market information, technical knowledge, financial literacy, and financial 
+access tools for credit and insurance in Kenya. Fortune Connect Innovation was started in 2021 and incubated by Fortune Credit before rolling out to several 
+places in rural Kenya.
+
+## About Shamba Network
+
+Shamba Network powers an oracle that enables the collection, analytics and use of ecological data on-chain. It provides the web3 ecosystem with 
+infrastructure that allows insight into the physical world, enabling things like ecological impact to be monitored. Through the Shamba oracle, 
+smart contracts can get updated on what is happening on the ground and use this data to trigger a wide variety of actions. 
+
+
+
+
